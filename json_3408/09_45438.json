@@ -1,0 +1,950 @@
+{
+    "chart": {
+        "isEditable": false,
+        "id": 45438,
+        "playersCount": 3,
+        "position": 0,
+        "title": "3-max sb vs btn mr[vs reg + reg]",
+        "description": "Chart 1-7 and 8-8 is the same! But it is because after 8-9BB BTN(reg who play some GTO charts) don\u0027t have MR in lower stacks, that\u0027s why chart 1-7 don\u0027t make a sense ",
+        "descriptionEn": "Chart 1-7 and 8-8 is the same! But it is because after 8-9BB BTN(reg who play some GTO charts) don\u0027t have MR in lower stacks, that\u0027s why chart 1-7 don\u0027t make a sense ",
+        "action": 1,
+        "opponentsType": 4,
+        "pfr": {
+            "sb": {
+                "start": 0,
+                "finish": 0
+            },
+            "bb": {
+                "start": 0,
+                "finish": 0
+            },
+            "btn": {
+                "start": 0,
+                "finish": 0
+            }
+        },
+        "stackRanges": [
+            {
+                "id": 636297,
+                "rangeMin": 1,
+                "rangeMax": 8,
+                "easy": 1,
+                "normal": 1,
+                "hard": 93884,
+                "charts": [
+                    {
+                        "combinations": "#0,n,a#1,n,a#2,n,a#3,n,a#4,n,f#5,n,f#6,n,f#7,n,f#8,n,f#9,n,f#10,n,f#11,n,f#12,n,f#13,n,a#14,n,a#15,n,a#16,n,f#17,n,f#18,n,f#19,n,f#20,n,f#21,n,f#22,n,f#23,n,f#24,n,f#25,n,f#26,n,a#27,n,f#28,n,a#29,n,f#30,n,f#31,n,f#32,n,f#33,n,f#34,n,f#35,n,f#36,n,f#37,n,f#38,n,f#39,n,f#40,n,f#41,n,f#42,n,a#43,n,f#44,n,f#45,n,f#46,n,f#47,n,f#48,n,f#49,n,f#50,n,f#51,n,f#52,n,f#53,n,f#54,n,f#55,n,f#56,n,a#57,n,f#58,n,f#59,n,f#60,n,f#61,n,f#62,n,f#63,n,f#64,n,f#65,n,f#66,n,f#67,n,f#68,n,f#69,n,f#70,n,f#71,n,f#72,n,f#73,n,f#74,n,f#75,n,f#76,n,f#77,n,f#78,n,f#79,n,f#80,n,f#81,n,f#82,n,f#83,n,f#84,n,f#85,n,f#86,n,f#87,n,f#88,n,f#89,n,f#90,n,f#91,n,f#92,n,f#93,n,f#94,n,f#95,n,f#96,n,f#97,n,f#98,n,f#99,n,f#100,n,f#101,n,f#102,n,f#103,n,f#104,n,f#105,n,f#106,n,f#107,n,f#108,n,f#109,n,f#110,n,f#111,n,f#112,n,f#113,n,f#114,n,f#115,n,f#116,n,f#117,n,f#118,n,f#119,n,f#120,n,f#121,n,f#122,n,f#123,n,f#124,n,f#125,n,f#126,n,f#127,n,f#128,n,f#129,n,f#130,n,f#131,n,f#132,n,f#133,n,f#134,n,f#135,n,f#136,n,f#137,n,f#138,n,f#139,n,f#140,n,f#141,n,f#142,n,f#143,n,f#144,n,f#145,n,f#146,n,f#147,n,f#148,n,f#149,n,f#150,n,f#151,n,f#152,n,f#153,n,f#154,n,f#155,n,f#156,n,f#157,n,f#158,n,f#159,n,f#160,n,f#161,n,f#162,n,f#163,n,f#164,n,f#165,n,f#166,n,f#167,n,f#168,n,f",
+                        "answers": [
+                            {
+                                "id": 3,
+                                "title": "Fold",
+                                "color": {
+                                    "key": "fold",
+                                    "value": "#E0E0E0"
+                                },
+                                "isRandom": "n",
+                                "value": "f"
+                            },
+                            {
+                                "id": 0,
+                                "title": "Call",
+                                "color": {
+                                    "key": "call",
+                                    "value": "#FFB74D"
+                                },
+                                "isRandom": "n",
+                                "value": "c"
+                            },
+                            {
+                                "id": 2,
+                                "title": "All-in",
+                                "factor": null,
+                                "color": {
+                                    "key": "all-in",
+                                    "value": "#4CAF50"
+                                },
+                                "isRandom": "n",
+                                "value": "a"
+                            }
+                        ],
+                        "secondAction": null,
+                        "secondActionFactor": null,
+                        "id": 1325197
+                    }
+                ]
+            },
+            {
+                "id": 636298,
+                "rangeMin": 9,
+                "rangeMax": 9,
+                "easy": 1,
+                "normal": 1,
+                "hard": 93885,
+                "charts": [
+                    {
+                        "combinations": "#0,n,a#1,n,a#2,n,a#3,n,a#4,n,a#5,n,a#6,n,a#7,n,a#8,n,a#9,n,a#10,n,a#11,n,a#12,n,a#13,n,a#14,n,a#15,n,a#16,n,a#17,n,a#18,n,f#19,n,f#20,n,f#21,n,f#22,n,f#23,n,f#24,n,f#25,n,f#26,n,a#27,n,a#28,n,a#29,n,a#30,n,a#31,n,f#32,n,f#33,n,f#34,n,f#35,n,f#36,n,f#37,n,f#38,n,f#39,n,a#40,n,a#41,n,f#42,n,a#43,n,f#44,n,f#45,n,f#46,n,f#47,n,f#48,n,f#49,n,f#50,n,f#51,n,f#52,n,a#53,n,f#54,n,f#55,n,f#56,n,a#57,n,f#58,n,f#59,n,f#60,n,f#61,n,f#62,n,f#63,n,f#64,n,f#65,n,a#66,n,f#67,n,f#68,n,f#69,n,f#70,n,a#71,n,f#72,n,f#73,n,f#74,n,f#75,n,f#76,n,f#77,n,f#78,n,a#79,n,f#80,n,f#81,n,f#82,n,f#83,n,f#84,n,a#85,n,f#86,n,f#87,n,f#88,n,f#89,n,f#90,n,f#91,n,a#92,n,f#93,n,f#94,n,f#95,n,f#96,n,f#97,n,f#98,n,a#99,n,f#100,n,f#101,n,f#102,n,f#103,n,f#104,n,f#105,n,f#106,n,f#107,n,f#108,n,f#109,n,f#110,n,f#111,n,f#112,n,a#113,n,f#114,n,f#115,n,f#116,n,f#117,n,a#118,n,f#119,n,f#120,n,f#121,n,f#122,n,f#123,n,f#124,n,f#125,n,f#126,n,a#127,n,f#128,n,f#129,n,f#130,n,a#131,n,f#132,n,f#133,n,f#134,n,f#135,n,f#136,n,f#137,n,f#138,n,f#139,n,f#140,n,f#141,n,f#142,n,f#143,n,a#144,n,f#145,n,f#146,n,f#147,n,f#148,n,f#149,n,f#150,n,f#151,n,f#152,n,f#153,n,f#154,n,f#155,n,f#156,n,f#157,n,f#158,n,f#159,n,f#160,n,f#161,n,f#162,n,f#163,n,f#164,n,f#165,n,f#166,n,f#167,n,f#168,n,f",
+                        "answers": [
+                            {
+                                "id": 3,
+                                "title": "Fold",
+                                "color": {
+                                    "key": "fold",
+                                    "value": "#E0E0E0"
+                                },
+                                "isRandom": "n",
+                                "value": "f"
+                            },
+                            {
+                                "id": 0,
+                                "title": "Call",
+                                "color": {
+                                    "key": "call",
+                                    "value": "#FFB74D"
+                                },
+                                "isRandom": "n",
+                                "value": "c"
+                            },
+                            {
+                                "id": 2,
+                                "title": "All-in",
+                                "factor": null,
+                                "color": {
+                                    "key": "all-in",
+                                    "value": "#4CAF50"
+                                },
+                                "isRandom": "n",
+                                "value": "a"
+                            }
+                        ],
+                        "secondAction": null,
+                        "secondActionFactor": null,
+                        "id": 1325198
+                    }
+                ]
+            },
+            {
+                "id": 636299,
+                "rangeMin": 10,
+                "rangeMax": 10,
+                "easy": 1,
+                "normal": 1,
+                "hard": 93886,
+                "charts": [
+                    {
+                        "combinations": "#0,n,a#1,n,a#2,n,a#3,n,a#4,n,a#5,n,a#6,n,a#7,n,a#8,n,a#9,n,a#10,n,a#11,n,a#12,n,a#13,n,a#14,n,a#15,n,a#16,n,a#17,n,a#18,n,a#19,n,f#20,n,f#21,n,f#22,n,f#23,n,f#24,n,f#25,n,f#26,n,a#27,n,a#28,n,a#29,n,a#30,n,a#31,n,f#32,n,f#33,n,f#34,n,f#35,n,f#36,n,f#37,n,f#38,n,f#39,n,a#40,n,a#41,n,f#42,n,a#43,n,a#44,n,f#45,n,f#46,n,f#47,n,f#48,n,f#49,n,f#50,n,f#51,n,f#52,n,a#53,n,f#54,n,f#55,n,f#56,n,a#57,n,f#58,n,f#59,n,f#60,n,f#61,n,f#62,n,f#63,n,f#64,n,f#65,n,a#66,n,f#67,n,f#68,n,f#69,n,f#70,n,a#71,n,f#72,n,f#73,n,f#74,n,f#75,n,f#76,n,f#77,n,f#78,n,a#79,n,f#80,n,f#81,n,f#82,n,f#83,n,f#84,n,a#85,n,f#86,n,f#87,n,f#88,n,f#89,n,f#90,n,f#91,n,a#92,n,f#93,n,f#94,n,f#95,n,f#96,n,f#97,n,f#98,n,a#99,n,f#100,n,f#101,n,f#102,n,f#103,n,f#104,n,f#105,n,f#106,n,f#107,n,f#108,n,f#109,n,f#110,n,f#111,n,f#112,n,a#113,n,f#114,n,f#115,n,f#116,n,f#117,n,a#118,n,f#119,n,f#120,n,f#121,n,f#122,n,f#123,n,f#124,n,f#125,n,f#126,n,a#127,n,f#128,n,f#129,n,f#130,n,a#131,n,f#132,n,f#133,n,f#134,n,f#135,n,f#136,n,f#137,n,f#138,n,f#139,n,f#140,n,a#141,n,f#142,n,f#143,n,f#144,n,f#145,n,f#146,n,f#147,n,f#148,n,f#149,n,f#150,n,f#151,n,f#152,n,f#153,n,f#154,n,f#155,n,f#156,n,f#157,n,f#158,n,f#159,n,f#160,n,f#161,n,f#162,n,f#163,n,f#164,n,f#165,n,f#166,n,f#167,n,f#168,n,f",
+                        "answers": [
+                            {
+                                "id": 3,
+                                "title": "Fold",
+                                "color": {
+                                    "key": "fold",
+                                    "value": "#E0E0E0"
+                                },
+                                "isRandom": "n",
+                                "value": "f"
+                            },
+                            {
+                                "id": 0,
+                                "title": "Call",
+                                "color": {
+                                    "key": "call",
+                                    "value": "#FFB74D"
+                                },
+                                "isRandom": "n",
+                                "value": "c"
+                            },
+                            {
+                                "id": 2,
+                                "title": "All-in",
+                                "factor": null,
+                                "color": {
+                                    "key": "all-in",
+                                    "value": "#4CAF50"
+                                },
+                                "isRandom": "n",
+                                "value": "a"
+                            }
+                        ],
+                        "secondAction": null,
+                        "secondActionFactor": null,
+                        "id": 1325199
+                    }
+                ]
+            },
+            {
+                "id": 636300,
+                "rangeMin": 11,
+                "rangeMax": 11,
+                "easy": 1,
+                "normal": 1,
+                "hard": 93887,
+                "charts": [
+                    {
+                        "combinations": "#0,n,a#1,n,a#2,n,a#3,n,a#4,n,a#5,n,a#6,n,a#7,n,a#8,n,a#9,n,a#10,n,a#11,n,a#12,n,a#13,n,a#14,n,a#15,n,a#16,n,a#17,n,a#18,n,a#19,n,f#20,n,f#21,n,f#22,n,f#23,n,f#24,n,f#25,n,f#26,n,a#27,n,a#28,n,a#29,n,a#30,n,a#31,n,f#32,n,f#33,n,f#34,n,f#35,n,f#36,n,f#37,n,f#38,n,f#39,n,a#40,n,a#41,n,a#42,n,a#43,n,a#44,n,f#45,n,f#46,n,f#47,n,f#48,n,f#49,n,f#50,n,f#51,n,f#52,n,a#53,n,f#54,n,f#55,n,f#56,n,a#57,n,f#58,n,f#59,n,f#60,n,f#61,n,f#62,n,f#63,n,f#64,n,f#65,n,a#66,n,f#67,n,f#68,n,f#69,n,f#70,n,a#71,n,f#72,n,f#73,n,f#74,n,f#75,n,f#76,n,f#77,n,f#78,n,a#79,n,f#80,n,f#81,n,f#82,n,f#83,n,f#84,n,a#85,n,f#86,n,f#87,n,f#88,n,f#89,n,f#90,n,f#91,n,a#92,n,f#93,n,f#94,n,f#95,n,f#96,n,f#97,n,f#98,n,a#99,n,f#100,n,f#101,n,f#102,n,f#103,n,f#104,n,f#105,n,f#106,n,f#107,n,f#108,n,f#109,n,f#110,n,f#111,n,f#112,n,a#113,n,f#114,n,f#115,n,f#116,n,f#117,n,a#118,n,f#119,n,f#120,n,f#121,n,f#122,n,f#123,n,f#124,n,f#125,n,f#126,n,a#127,n,f#128,n,f#129,n,f#130,n,a#131,n,f#132,n,f#133,n,f#134,n,f#135,n,f#136,n,f#137,n,f#138,n,f#139,n,f#140,n,a#141,n,f#142,n,f#143,n,f#144,n,f#145,n,f#146,n,f#147,n,f#148,n,f#149,n,f#150,n,f#151,n,f#152,n,f#153,n,f#154,n,a#155,n,f#156,n,f#157,n,f#158,n,f#159,n,f#160,n,f#161,n,f#162,n,f#163,n,f#164,n,f#165,n,f#166,n,f#167,n,f#168,n,f",
+                        "answers": [
+                            {
+                                "id": 3,
+                                "title": "Fold",
+                                "color": {
+                                    "key": "fold",
+                                    "value": "#E0E0E0"
+                                },
+                                "isRandom": "n",
+                                "value": "f"
+                            },
+                            {
+                                "id": 0,
+                                "title": "Call",
+                                "color": {
+                                    "key": "call",
+                                    "value": "#FFB74D"
+                                },
+                                "isRandom": "n",
+                                "value": "c"
+                            },
+                            {
+                                "id": 2,
+                                "title": "All-in",
+                                "factor": null,
+                                "color": {
+                                    "key": "all-in",
+                                    "value": "#4CAF50"
+                                },
+                                "isRandom": "n",
+                                "value": "a"
+                            }
+                        ],
+                        "secondAction": null,
+                        "secondActionFactor": null,
+                        "id": 1325200
+                    }
+                ]
+            },
+            {
+                "id": 636301,
+                "rangeMin": 12,
+                "rangeMax": 12,
+                "easy": 1,
+                "normal": 1,
+                "hard": 93888,
+                "charts": [
+                    {
+                        "combinations": "#0,n,a#1,n,a#2,n,a#3,n,a#4,n,a#5,n,a#6,n,a#7,n,a#8,n,a#9,n,a#10,n,a#11,n,a#12,n,a#13,n,a#14,n,a#15,n,a#16,n,a#17,n,a#18,n,a#19,n,f#20,n,f#21,n,f#22,n,f#23,n,f#24,n,f#25,n,f#26,n,a#27,n,a#28,n,a#29,n,a#30,n,a#31,n,a#32,n,f#33,n,f#34,n,f#35,n,f#36,n,f#37,n,f#38,n,f#39,n,a#40,n,a#41,n,a#42,n,a#43,n,a#44,n,f#45,n,f#46,n,f#47,n,f#48,n,f#49,n,f#50,n,f#51,n,f#52,n,a#53,n,f#54,n,f#55,n,f#56,n,a#57,n,f#58,n,f#59,n,f#60,n,f#61,n,f#62,n,f#63,n,f#64,n,f#65,n,a#66,n,f#67,n,f#68,n,f#69,n,f#70,n,a#71,n,f#72,n,f#73,n,f#74,n,f#75,n,f#76,n,f#77,n,f#78,n,a#79,n,f#80,n,f#81,n,f#82,n,f#83,n,f#84,n,a#85,n,f#86,n,f#87,n,f#88,n,f#89,n,f#90,n,f#91,y,a(50)-f#92,n,f#93,n,f#94,n,f#95,n,f#96,n,f#97,n,f#98,n,a#99,n,f#100,n,f#101,n,f#102,n,f#103,n,f#104,n,f#105,n,f#106,n,f#107,n,f#108,n,f#109,n,f#110,n,f#111,n,f#112,n,a#113,n,f#114,n,f#115,n,f#116,n,f#117,n,a#118,n,f#119,n,f#120,n,f#121,n,f#122,n,f#123,n,f#124,n,f#125,n,f#126,n,a#127,n,f#128,n,f#129,n,f#130,y,a(50)-f#131,n,f#132,n,f#133,n,f#134,n,f#135,n,f#136,n,f#137,n,f#138,n,f#139,n,f#140,n,a#141,n,f#142,n,f#143,n,f#144,n,f#145,n,f#146,n,f#147,n,f#148,n,f#149,n,f#150,n,f#151,n,f#152,n,f#153,n,f#154,n,a#155,n,f#156,n,f#157,n,f#158,n,f#159,n,f#160,n,f#161,n,f#162,n,f#163,n,f#164,n,f#165,n,f#166,n,f#167,n,f#168,n,f",
+                        "answers": [
+                            {
+                                "id": 3,
+                                "title": "Fold",
+                                "color": {
+                                    "key": "fold",
+                                    "value": "#E0E0E0"
+                                },
+                                "isRandom": "n",
+                                "value": "f"
+                            },
+                            {
+                                "id": 0,
+                                "title": "Call",
+                                "color": {
+                                    "key": "call",
+                                    "value": "#FFB74D"
+                                },
+                                "isRandom": "n",
+                                "value": "c"
+                            },
+                            {
+                                "id": 2,
+                                "title": "All-in",
+                                "factor": null,
+                                "color": {
+                                    "key": "all-in",
+                                    "value": "#4CAF50"
+                                },
+                                "isRandom": "n",
+                                "value": "a"
+                            }
+                        ],
+                        "secondAction": null,
+                        "secondActionFactor": null,
+                        "id": 1325201
+                    }
+                ]
+            },
+            {
+                "id": 636302,
+                "rangeMin": 13,
+                "rangeMax": 13,
+                "easy": 1,
+                "normal": 1,
+                "hard": 93889,
+                "charts": [
+                    {
+                        "combinations": "#0,n,a#1,n,a#2,n,a#3,n,a#4,n,a#5,n,a#6,n,a#7,n,a#8,n,a#9,n,a#10,n,a#11,n,a#12,n,a#13,n,a#14,n,a#15,n,a#16,n,a#17,n,a#18,n,a#19,n,f#20,n,f#21,n,f#22,n,f#23,n,f#24,n,f#25,n,f#26,n,a#27,n,a#28,n,a#29,n,a#30,n,a#31,n,a#32,n,f#33,n,f#34,n,f#35,n,f#36,n,f#37,n,f#38,n,f#39,n,a#40,n,a#41,n,a#42,n,a#43,n,a#44,n,a#45,n,f#46,n,f#47,n,f#48,n,f#49,n,f#50,n,f#51,n,f#52,n,a#53,n,f#54,n,f#55,n,f#56,n,a#57,n,a#58,n,f#59,n,f#60,n,f#61,n,f#62,n,f#63,n,f#64,n,f#65,n,a#66,n,f#67,n,f#68,n,f#69,n,f#70,n,a#71,n,f#72,n,f#73,n,f#74,n,f#75,n,f#76,n,f#77,n,f#78,n,a#79,n,f#80,n,f#81,n,f#82,n,f#83,n,f#84,n,a#85,n,f#86,n,f#87,n,f#88,n,f#89,n,f#90,n,f#91,n,f#92,n,f#93,n,f#94,n,f#95,n,f#96,n,f#97,n,f#98,n,a#99,n,f#100,n,f#101,n,f#102,n,f#103,n,f#104,n,f#105,n,f#106,n,f#107,n,f#108,n,f#109,n,f#110,n,f#111,n,f#112,n,a#113,n,f#114,n,f#115,n,f#116,n,f#117,n,a#118,n,f#119,n,f#120,n,f#121,n,f#122,n,f#123,n,f#124,n,f#125,n,f#126,n,a#127,n,f#128,n,f#129,n,f#130,n,f#131,n,f#132,n,f#133,n,f#134,n,f#135,n,f#136,n,f#137,n,f#138,n,f#139,n,f#140,n,a#141,n,f#142,n,f#143,n,f#144,n,f#145,n,f#146,n,f#147,n,f#148,n,f#149,n,f#150,n,f#151,n,f#152,n,f#153,n,f#154,n,a#155,n,f#156,n,f#157,n,f#158,n,f#159,n,f#160,n,f#161,n,f#162,n,f#163,n,f#164,n,f#165,n,f#166,n,f#167,n,f#168,n,a",
+                        "answers": [
+                            {
+                                "id": 3,
+                                "title": "Fold",
+                                "color": {
+                                    "key": "fold",
+                                    "value": "#E0E0E0"
+                                },
+                                "isRandom": "n",
+                                "value": "f"
+                            },
+                            {
+                                "id": 0,
+                                "title": "Call",
+                                "color": {
+                                    "key": "call",
+                                    "value": "#FFB74D"
+                                },
+                                "isRandom": "n",
+                                "value": "c"
+                            },
+                            {
+                                "id": 2,
+                                "title": "All-in",
+                                "factor": null,
+                                "color": {
+                                    "key": "all-in",
+                                    "value": "#4CAF50"
+                                },
+                                "isRandom": "n",
+                                "value": "a"
+                            }
+                        ],
+                        "secondAction": null,
+                        "secondActionFactor": null,
+                        "id": 1325202
+                    }
+                ]
+            },
+            {
+                "id": 636303,
+                "rangeMin": 14,
+                "rangeMax": 14,
+                "easy": 1,
+                "normal": 1,
+                "hard": 93890,
+                "charts": [
+                    {
+                        "combinations": "#0,n,a#1,n,a#2,n,a#3,n,a#4,n,a#5,n,a#6,n,a#7,n,a#8,n,a#9,n,a#10,n,a#11,n,a#12,n,a#13,n,a#14,n,a#15,n,a#16,n,a#17,n,a#18,n,a#19,n,f#20,n,f#21,n,f#22,n,f#23,n,f#24,n,f#25,n,f#26,n,a#27,n,a#28,n,a#29,n,a#30,n,a#31,n,a#32,n,f#33,n,f#34,n,f#35,n,f#36,n,f#37,n,f#38,n,f#39,n,a#40,n,a#41,y,a(50)-f#42,n,a#43,n,a#44,n,a#45,n,f#46,n,f#47,n,f#48,n,f#49,n,f#50,n,f#51,n,f#52,n,a#53,n,f#54,n,f#55,n,f#56,n,a#57,n,a#58,n,f#59,n,f#60,n,f#61,n,f#62,n,f#63,n,f#64,n,f#65,n,a#66,n,f#67,n,f#68,n,f#69,n,f#70,n,a#71,y,a(50)-f#72,n,f#73,n,f#74,n,f#75,n,f#76,n,f#77,n,f#78,n,a#79,n,f#80,n,f#81,n,f#82,n,f#83,n,f#84,n,a#85,n,f#86,n,f#87,n,f#88,n,f#89,n,f#90,n,f#91,n,f#92,n,f#93,n,f#94,n,f#95,n,f#96,n,f#97,n,f#98,n,a#99,n,f#100,n,f#101,n,f#102,n,f#103,n,f#104,n,f#105,n,f#106,n,f#107,n,f#108,n,f#109,n,f#110,n,f#111,n,f#112,n,a#113,n,f#114,n,f#115,n,f#116,n,f#117,n,f#118,n,f#119,n,f#120,n,f#121,n,f#122,n,f#123,n,f#124,n,f#125,n,f#126,n,a#127,n,f#128,n,f#129,n,f#130,n,f#131,n,f#132,n,f#133,n,f#134,n,f#135,n,f#136,n,f#137,n,f#138,n,f#139,n,f#140,n,a#141,n,f#142,n,f#143,n,f#144,n,f#145,n,f#146,n,f#147,n,f#148,n,f#149,n,f#150,n,f#151,n,f#152,n,f#153,n,f#154,n,a#155,n,f#156,n,f#157,n,f#158,n,f#159,n,f#160,n,f#161,n,f#162,n,f#163,n,f#164,n,f#165,n,f#166,n,f#167,n,f#168,n,a",
+                        "answers": [
+                            {
+                                "id": 3,
+                                "title": "Fold",
+                                "color": {
+                                    "key": "fold",
+                                    "value": "#E0E0E0"
+                                },
+                                "isRandom": "n",
+                                "value": "f"
+                            },
+                            {
+                                "id": 0,
+                                "title": "Call",
+                                "color": {
+                                    "key": "call",
+                                    "value": "#FFB74D"
+                                },
+                                "isRandom": "n",
+                                "value": "c"
+                            },
+                            {
+                                "id": 2,
+                                "title": "All-in",
+                                "factor": null,
+                                "color": {
+                                    "key": "all-in",
+                                    "value": "#4CAF50"
+                                },
+                                "isRandom": "n",
+                                "value": "a"
+                            }
+                        ],
+                        "secondAction": null,
+                        "secondActionFactor": null,
+                        "id": 1325203
+                    }
+                ]
+            },
+            {
+                "id": 636304,
+                "rangeMin": 15,
+                "rangeMax": 15,
+                "easy": 1,
+                "normal": 1,
+                "hard": 93891,
+                "charts": [
+                    {
+                        "combinations": "#0,n,a#1,n,a#2,n,a#3,n,a#4,n,a#5,n,a#6,n,a#7,n,a#8,n,a#9,n,a#10,n,a#11,n,a#12,n,a#13,n,a#14,n,a#15,n,a#16,n,a#17,n,a#18,n,a#19,n,f#20,n,f#21,n,f#22,n,f#23,n,f#24,n,f#25,n,f#26,n,a#27,n,a#28,n,a#29,n,a#30,n,a#31,n,a#32,n,f#33,n,f#34,n,f#35,n,f#36,n,f#37,n,f#38,n,f#39,n,a#40,n,a#41,n,f#42,n,a#43,n,a#44,n,a#45,n,f#46,n,f#47,n,f#48,n,f#49,n,f#50,n,f#51,n,f#52,n,a#53,n,f#54,n,f#55,n,f#56,n,a#57,n,a#58,n,f#59,n,f#60,n,f#61,n,f#62,n,f#63,n,f#64,n,f#65,n,a#66,n,f#67,n,f#68,n,f#69,n,f#70,n,a#71,n,a#72,n,f#73,n,f#74,n,f#75,n,f#76,n,f#77,n,f#78,n,a#79,n,f#80,n,f#81,n,f#82,n,f#83,n,f#84,n,a#85,n,f#86,n,f#87,n,f#88,n,f#89,n,f#90,n,f#91,n,f#92,n,f#93,n,f#94,n,f#95,n,f#96,n,f#97,n,f#98,n,a#99,n,f#100,n,f#101,n,f#102,n,f#103,n,f#104,n,f#105,n,f#106,n,f#107,n,f#108,n,f#109,n,f#110,n,f#111,n,f#112,n,a#113,n,f#114,n,f#115,n,f#116,n,f#117,n,f#118,n,f#119,n,f#120,n,f#121,n,f#122,n,f#123,n,f#124,n,f#125,n,f#126,n,a#127,n,f#128,n,f#129,n,f#130,n,f#131,n,f#132,n,f#133,n,f#134,n,f#135,n,f#136,n,f#137,n,f#138,n,f#139,n,f#140,n,a#141,n,f#142,n,f#143,n,f#144,n,f#145,n,f#146,n,f#147,n,f#148,n,f#149,n,f#150,n,f#151,n,f#152,n,f#153,n,f#154,n,a#155,n,f#156,n,f#157,n,f#158,n,f#159,n,f#160,n,f#161,n,f#162,n,f#163,n,f#164,n,f#165,n,f#166,n,f#167,n,f#168,n,a",
+                        "answers": [
+                            {
+                                "id": 3,
+                                "title": "Fold",
+                                "color": {
+                                    "key": "fold",
+                                    "value": "#E0E0E0"
+                                },
+                                "isRandom": "n",
+                                "value": "f"
+                            },
+                            {
+                                "id": 0,
+                                "title": "Call",
+                                "color": {
+                                    "key": "call",
+                                    "value": "#FFB74D"
+                                },
+                                "isRandom": "n",
+                                "value": "c"
+                            },
+                            {
+                                "id": 2,
+                                "title": "All-in",
+                                "factor": null,
+                                "color": {
+                                    "key": "all-in",
+                                    "value": "#4CAF50"
+                                },
+                                "isRandom": "n",
+                                "value": "a"
+                            }
+                        ],
+                        "secondAction": null,
+                        "secondActionFactor": null,
+                        "id": 1325204
+                    }
+                ]
+            },
+            {
+                "id": 636305,
+                "rangeMin": 16,
+                "rangeMax": 17,
+                "easy": 1,
+                "normal": 1,
+                "hard": 1,
+                "charts": [
+                    {
+                        "combinations": "#0,n,a#1,n,a#2,n,a#3,n,a#4,n,a#5,n,a#6,n,a#7,n,a#8,n,a#9,n,a#10,n,a#11,n,a#12,n,a#13,n,a#14,n,a#15,n,a#16,n,a#17,n,a#18,n,a#19,n,f#20,n,f#21,n,f#22,n,f#23,n,f#24,n,f#25,n,f#26,n,a#27,n,a#28,n,a#29,n,a#30,n,a#31,n,a#32,n,f#33,n,f#34,n,f#35,n,f#36,n,f#37,n,f#38,n,f#39,n,a#40,n,a#41,n,f#42,n,a#43,n,a#44,n,a#45,n,f#46,n,f#47,n,f#48,n,f#49,n,f#50,n,f#51,n,f#52,n,a#53,n,f#54,n,f#55,n,f#56,n,a#57,n,a#58,y,a(50)-f#59,n,f#60,n,f#61,n,f#62,n,f#63,n,f#64,n,f#65,n,a#66,n,f#67,n,f#68,n,f#69,n,f#70,n,a#71,n,a#72,n,f#73,n,f#74,n,f#75,n,f#76,n,f#77,n,f#78,n,a#79,n,f#80,n,f#81,n,f#82,n,f#83,n,f#84,n,a#85,n,f#86,n,f#87,n,f#88,n,f#89,n,f#90,n,f#91,n,f#92,n,f#93,n,f#94,n,f#95,n,f#96,n,f#97,n,f#98,n,a#99,n,f#100,n,f#101,n,f#102,n,f#103,n,f#104,n,f#105,n,f#106,n,f#107,n,f#108,n,f#109,n,f#110,n,f#111,n,f#112,n,a#113,n,f#114,n,f#115,n,f#116,n,f#117,n,f#118,n,f#119,n,f#120,n,f#121,n,f#122,n,f#123,n,f#124,n,f#125,n,f#126,n,a#127,n,f#128,n,f#129,n,f#130,n,f#131,n,f#132,n,f#133,n,f#134,n,f#135,n,f#136,n,f#137,n,f#138,n,f#139,n,f#140,n,a#141,n,f#142,n,f#143,n,f#144,n,f#145,n,f#146,n,f#147,n,f#148,n,f#149,n,f#150,n,f#151,n,f#152,n,f#153,n,f#154,n,a#155,n,f#156,n,f#157,n,f#158,n,f#159,n,f#160,n,f#161,n,f#162,n,f#163,n,f#164,n,f#165,n,f#166,n,f#167,n,f#168,n,a",
+                        "answers": [
+                            {
+                                "id": 3,
+                                "title": "Fold",
+                                "color": {
+                                    "key": "fold",
+                                    "value": "#E0E0E0"
+                                },
+                                "isRandom": "n",
+                                "value": "f"
+                            },
+                            {
+                                "id": 0,
+                                "title": "Call",
+                                "color": {
+                                    "key": "call",
+                                    "value": "#FFB74D"
+                                },
+                                "isRandom": "n",
+                                "value": "c"
+                            },
+                            {
+                                "id": 2,
+                                "title": "All-in",
+                                "factor": null,
+                                "color": {
+                                    "key": "all-in",
+                                    "value": "#4CAF50"
+                                },
+                                "isRandom": "n",
+                                "value": "a"
+                            }
+                        ],
+                        "secondAction": null,
+                        "secondActionFactor": null,
+                        "id": 1325205
+                    }
+                ]
+            },
+            {
+                "id": 636306,
+                "rangeMin": 18,
+                "rangeMax": 18,
+                "easy": 1,
+                "normal": 1,
+                "hard": 1,
+                "charts": [
+                    {
+                        "combinations": "#0,n,r#1,n,a#2,n,a#3,n,a#4,n,a#5,n,a#6,n,a#7,n,a#8,n,a#9,n,a#10,n,a#11,n,a#12,n,a#13,n,a#14,n,a#15,n,a#16,n,a#17,n,a#18,n,a#19,n,f#20,n,f#21,n,f#22,n,f#23,n,f#24,n,f#25,n,f#26,n,a#27,n,a#28,n,a#29,n,a#30,n,a#31,n,a#32,n,f#33,n,f#34,n,f#35,n,f#36,n,f#37,n,f#38,n,f#39,n,a#40,n,a#41,n,f#42,n,a#43,n,a#44,n,a#45,n,f#46,n,f#47,n,f#48,n,f#49,n,f#50,n,f#51,n,f#52,n,a#53,n,f#54,n,f#55,n,f#56,n,a#57,n,a#58,y,a(50)-f#59,n,f#60,n,f#61,n,f#62,n,f#63,n,f#64,n,f#65,n,a#66,n,f#67,n,f#68,n,f#69,n,f#70,n,a#71,n,a#72,n,f#73,n,f#74,n,f#75,n,f#76,n,f#77,n,f#78,n,a#79,n,f#80,n,f#81,n,f#82,n,f#83,n,f#84,n,a#85,n,f#86,n,f#87,n,f#88,n,f#89,n,f#90,n,f#91,n,f#92,n,f#93,n,f#94,n,f#95,n,f#96,n,f#97,n,f#98,n,a#99,n,f#100,n,f#101,n,f#102,n,f#103,n,f#104,n,f#105,n,f#106,n,f#107,n,f#108,n,f#109,n,f#110,n,f#111,n,f#112,n,a#113,n,f#114,n,f#115,n,f#116,n,f#117,n,f#118,n,f#119,n,f#120,n,f#121,n,f#122,n,f#123,n,f#124,n,f#125,n,f#126,n,a#127,n,f#128,n,f#129,n,f#130,n,f#131,n,f#132,n,f#133,n,f#134,n,f#135,n,f#136,n,f#137,n,f#138,n,f#139,n,f#140,n,a#141,n,f#142,n,f#143,n,f#144,n,f#145,n,f#146,n,f#147,n,f#148,n,f#149,n,f#150,n,f#151,n,f#152,n,f#153,n,f#154,n,a#155,n,f#156,n,f#157,n,f#158,n,f#159,n,f#160,n,f#161,n,f#162,n,f#163,n,f#164,n,f#165,n,f#166,n,f#167,n,f#168,n,a",
+                        "answers": [
+                            {
+                                "id": 3,
+                                "title": "Fold",
+                                "color": {
+                                    "key": "fold",
+                                    "value": "#E0E0E0"
+                                },
+                                "isRandom": "n",
+                                "value": "f"
+                            },
+                            {
+                                "id": 0,
+                                "title": "Call",
+                                "color": {
+                                    "key": "call",
+                                    "value": "#FFB74D"
+                                },
+                                "isRandom": "n",
+                                "value": "c"
+                            },
+                            {
+                                "id": 2,
+                                "title": "All-in",
+                                "factor": null,
+                                "color": {
+                                    "key": "all-in",
+                                    "value": "#4CAF50"
+                                },
+                                "isRandom": "n",
+                                "value": "a"
+                            },
+                            {
+                                "id": 1,
+                                "title": "Raise",
+                                "factor": 2.5,
+                                "color": {
+                                    "key": "raise2",
+                                    "value": "#7986CB"
+                                },
+                                "isRandom": "n",
+                                "value": "r"
+                            }
+                        ],
+                        "secondAction": null,
+                        "secondActionFactor": null,
+                        "id": 1325206
+                    }
+                ]
+            },
+            {
+                "id": 636307,
+                "rangeMin": 19,
+                "rangeMax": 19,
+                "easy": 1,
+                "normal": 1,
+                "hard": 1,
+                "charts": [
+                    {
+                        "combinations": "#0,n,r#1,n,a#2,n,a#3,n,a#4,n,a#5,n,a#6,n,a#7,n,a#8,n,a#9,n,a#10,n,a#11,n,a#12,n,a#13,n,a#14,n,a#15,n,a#16,n,a#17,n,a#18,n,a#19,n,f#20,n,f#21,n,f#22,n,f#23,n,f#24,n,f#25,n,f#26,n,a#27,n,a#28,n,a#29,n,a#30,n,a#31,n,a#32,n,f#33,n,f#34,n,f#35,n,f#36,n,f#37,n,f#38,n,f#39,n,a#40,y,a(50)-f#41,n,f#42,n,a#43,n,a#44,n,a#45,n,f#46,n,f#47,n,f#48,n,f#49,n,f#50,n,f#51,n,f#52,n,a#53,n,f#54,n,f#55,n,f#56,n,a#57,n,a#58,n,f#59,n,f#60,n,f#61,n,f#62,n,f#63,n,f#64,n,f#65,n,a#66,n,f#67,n,f#68,n,f#69,n,f#70,n,a#71,n,a#72,n,f#73,n,f#74,n,f#75,n,f#76,n,f#77,n,f#78,n,a#79,n,f#80,n,f#81,n,f#82,n,f#83,n,f#84,n,a#85,n,f#86,n,f#87,n,f#88,n,f#89,n,f#90,n,f#91,n,f#92,n,f#93,n,f#94,n,f#95,n,f#96,n,f#97,n,f#98,n,a#99,n,f#100,n,f#101,n,f#102,n,f#103,n,f#104,n,f#105,n,f#106,n,f#107,n,f#108,n,f#109,n,f#110,n,f#111,n,f#112,n,a#113,n,f#114,n,f#115,n,f#116,n,f#117,n,f#118,n,f#119,n,f#120,n,f#121,n,f#122,n,f#123,n,f#124,n,f#125,n,f#126,n,a#127,n,f#128,n,f#129,n,f#130,n,f#131,n,f#132,n,f#133,n,f#134,n,f#135,n,f#136,n,f#137,n,f#138,n,f#139,n,f#140,n,a#141,n,f#142,n,f#143,n,f#144,n,f#145,n,f#146,n,f#147,n,f#148,n,f#149,n,f#150,n,f#151,n,f#152,n,f#153,n,f#154,n,a#155,n,f#156,n,f#157,n,f#158,n,f#159,n,f#160,n,f#161,n,f#162,n,f#163,n,f#164,n,f#165,n,f#166,n,f#167,n,f#168,n,a",
+                        "answers": [
+                            {
+                                "id": 3,
+                                "title": "Fold",
+                                "color": {
+                                    "key": "fold",
+                                    "value": "#E0E0E0"
+                                },
+                                "isRandom": "n",
+                                "value": "f"
+                            },
+                            {
+                                "id": 0,
+                                "title": "Call",
+                                "color": {
+                                    "key": "call",
+                                    "value": "#FFB74D"
+                                },
+                                "isRandom": "n",
+                                "value": "c"
+                            },
+                            {
+                                "id": 2,
+                                "title": "All-in",
+                                "factor": null,
+                                "color": {
+                                    "key": "all-in",
+                                    "value": "#4CAF50"
+                                },
+                                "isRandom": "n",
+                                "value": "a"
+                            },
+                            {
+                                "id": 1,
+                                "title": "Raise",
+                                "factor": 2.5,
+                                "color": {
+                                    "key": "raise2",
+                                    "value": "#7986CB"
+                                },
+                                "isRandom": "n",
+                                "value": "r"
+                            }
+                        ],
+                        "secondAction": null,
+                        "secondActionFactor": null,
+                        "id": 1325207
+                    }
+                ]
+            },
+            {
+                "id": 636308,
+                "rangeMin": 20,
+                "rangeMax": 20,
+                "easy": 1,
+                "normal": 1,
+                "hard": 1,
+                "charts": [
+                    {
+                        "combinations": "#0,n,r#1,n,a#2,n,a#3,n,a#4,y,a(50)-r#5,n,a#6,n,a#7,n,a#8,n,a#9,n,a#10,n,a#11,n,a#12,n,r#13,n,a#14,y,a(50)-r#15,n,a#16,n,a#17,n,a#18,n,a#19,n,f#20,n,f#21,n,f#22,n,f#23,n,f#24,n,f#25,n,f#26,n,a#27,n,a#28,n,a#29,n,a#30,n,a#31,n,a#32,n,f#33,n,f#34,n,f#35,n,f#36,n,f#37,n,f#38,n,f#39,n,a#40,y,a(50)-f#41,n,f#42,n,a#43,n,a#44,n,a#45,n,f#46,n,f#47,n,f#48,n,f#49,n,f#50,n,f#51,n,f#52,n,a#53,n,f#54,n,f#55,n,f#56,n,a#57,n,a#58,n,f#59,n,f#60,n,f#61,n,f#62,n,f#63,n,f#64,n,f#65,n,a#66,n,f#67,n,f#68,n,f#69,n,f#70,n,a#71,n,a#72,n,f#73,n,f#74,n,f#75,n,f#76,n,f#77,n,f#78,n,a#79,n,f#80,n,f#81,n,f#82,n,f#83,n,f#84,n,a#85,n,f#86,n,f#87,n,f#88,n,f#89,n,f#90,n,f#91,n,f#92,n,f#93,n,f#94,n,f#95,n,f#96,n,f#97,n,f#98,n,a#99,n,f#100,n,f#101,n,f#102,n,f#103,n,f#104,n,f#105,n,f#106,n,f#107,n,f#108,n,f#109,n,f#110,n,f#111,n,f#112,n,a#113,n,f#114,n,f#115,n,f#116,n,f#117,n,f#118,n,f#119,n,f#120,n,f#121,n,f#122,n,f#123,n,f#124,n,f#125,n,f#126,n,a#127,n,f#128,n,f#129,n,f#130,n,f#131,n,f#132,n,f#133,n,f#134,n,f#135,n,f#136,n,f#137,n,f#138,n,f#139,n,f#140,n,a#141,n,f#142,n,f#143,n,f#144,n,f#145,n,f#146,n,f#147,n,f#148,n,f#149,n,f#150,n,f#151,n,f#152,n,f#153,n,f#154,n,a#155,n,f#156,n,f#157,n,f#158,n,f#159,n,f#160,n,f#161,n,f#162,n,f#163,n,f#164,n,f#165,n,f#166,n,f#167,n,f#168,n,a",
+                        "answers": [
+                            {
+                                "id": 3,
+                                "title": "Fold",
+                                "color": {
+                                    "key": "fold",
+                                    "value": "#E0E0E0"
+                                },
+                                "isRandom": "n",
+                                "value": "f"
+                            },
+                            {
+                                "id": 0,
+                                "title": "Call",
+                                "color": {
+                                    "key": "call",
+                                    "value": "#FFB74D"
+                                },
+                                "isRandom": "n",
+                                "value": "c"
+                            },
+                            {
+                                "id": 2,
+                                "title": "All-in",
+                                "factor": null,
+                                "color": {
+                                    "key": "all-in",
+                                    "value": "#4CAF50"
+                                },
+                                "isRandom": "n",
+                                "value": "a"
+                            },
+                            {
+                                "id": 1,
+                                "title": "Raise",
+                                "factor": 2.5,
+                                "color": {
+                                    "key": "raise2",
+                                    "value": "#7986CB"
+                                },
+                                "isRandom": "n",
+                                "value": "r"
+                            }
+                        ],
+                        "secondAction": null,
+                        "secondActionFactor": null,
+                        "id": 1325208
+                    }
+                ]
+            },
+            {
+                "id": 636309,
+                "rangeMin": 21,
+                "rangeMax": 21,
+                "easy": 1,
+                "normal": 1,
+                "hard": 1,
+                "charts": [
+                    {
+                        "combinations": "#0,n,r#1,n,a#2,n,a#3,n,a#4,n,r#5,n,a#6,n,a#7,n,a#8,n,a#9,n,a#10,n,a#11,n,a#12,n,r#13,n,a#14,n,r#15,n,a#16,n,a#17,n,a#18,n,a#19,n,f#20,n,f#21,n,f#22,n,f#23,n,f#24,n,f#25,n,f#26,n,a#27,n,a#28,n,a#29,n,a#30,n,a#31,n,a#32,n,f#33,n,f#34,n,f#35,n,f#36,n,f#37,n,f#38,n,f#39,n,a#40,y,a(50)-f#41,n,f#42,n,a#43,n,a#44,n,a#45,n,f#46,n,f#47,n,f#48,n,f#49,n,f#50,n,f#51,n,f#52,n,a#53,n,f#54,n,f#55,n,f#56,n,a#57,n,a#58,n,f#59,n,f#60,n,f#61,n,f#62,n,f#63,n,f#64,n,f#65,n,a#66,n,f#67,n,f#68,n,f#69,n,f#70,n,a#71,n,a#72,n,f#73,n,f#74,n,f#75,n,f#76,n,f#77,n,f#78,n,a#79,n,f#80,n,f#81,n,f#82,n,f#83,n,f#84,n,a#85,n,f#86,n,f#87,n,f#88,n,f#89,n,f#90,n,f#91,n,f#92,n,f#93,n,f#94,n,f#95,n,f#96,n,f#97,n,f#98,n,a#99,n,f#100,n,f#101,n,f#102,n,f#103,n,f#104,n,f#105,n,f#106,n,f#107,n,f#108,n,f#109,n,f#110,n,f#111,n,f#112,n,a#113,n,f#114,n,f#115,n,f#116,n,f#117,n,f#118,n,f#119,n,f#120,n,f#121,n,f#122,n,f#123,n,f#124,n,f#125,n,f#126,n,a#127,n,f#128,n,f#129,n,f#130,n,f#131,n,f#132,n,f#133,n,f#134,n,f#135,n,f#136,n,f#137,n,f#138,n,f#139,n,f#140,n,a#141,n,f#142,n,f#143,n,f#144,n,f#145,n,f#146,n,f#147,n,f#148,n,f#149,n,f#150,n,f#151,n,f#152,n,f#153,n,f#154,n,a#155,n,f#156,n,f#157,n,f#158,n,f#159,n,f#160,n,f#161,n,f#162,n,f#163,n,f#164,n,f#165,n,f#166,n,f#167,n,f#168,n,a",
+                        "answers": [
+                            {
+                                "id": 3,
+                                "title": "Fold",
+                                "color": {
+                                    "key": "fold",
+                                    "value": "#E0E0E0"
+                                },
+                                "isRandom": "n",
+                                "value": "f"
+                            },
+                            {
+                                "id": 0,
+                                "title": "Call",
+                                "color": {
+                                    "key": "call",
+                                    "value": "#FFB74D"
+                                },
+                                "isRandom": "n",
+                                "value": "c"
+                            },
+                            {
+                                "id": 2,
+                                "title": "All-in",
+                                "factor": null,
+                                "color": {
+                                    "key": "all-in",
+                                    "value": "#4CAF50"
+                                },
+                                "isRandom": "n",
+                                "value": "a"
+                            },
+                            {
+                                "id": 1,
+                                "title": "Raise",
+                                "factor": 2.5,
+                                "color": {
+                                    "key": "raise2",
+                                    "value": "#7986CB"
+                                },
+                                "isRandom": "n",
+                                "value": "r"
+                            }
+                        ],
+                        "secondAction": null,
+                        "secondActionFactor": null,
+                        "id": 1325209
+                    }
+                ]
+            },
+            {
+                "id": 636310,
+                "rangeMin": 22,
+                "rangeMax": 22,
+                "easy": 1,
+                "normal": 1,
+                "hard": 1,
+                "charts": [
+                    {
+                        "combinations": "#0,n,r#1,y,a(50)-r#2,n,a#3,n,a#4,n,r#5,n,a#6,n,a#7,n,a#8,y,a(50)-r#9,n,a#10,n,a#11,y,a(50)-r#12,n,r#13,n,a#14,n,r#15,n,a#16,n,a#17,n,a#18,n,a#19,n,f#20,n,f#21,n,f#22,n,f#23,n,f#24,n,f#25,n,f#26,n,a#27,n,a#28,n,r#29,n,a#30,n,a#31,n,a#32,n,f#33,n,f#34,n,f#35,n,f#36,n,f#37,n,f#38,n,f#39,n,a#40,y,a(50)-f#41,n,f#42,y,a(50)-r#43,n,a#44,n,a#45,n,f#46,n,f#47,n,f#48,n,f#49,n,f#50,n,f#51,n,f#52,n,a#53,n,f#54,n,f#55,n,f#56,n,a#57,n,a#58,n,f#59,n,f#60,n,f#61,n,f#62,n,f#63,n,f#64,n,f#65,y,a(50)-r#66,n,f#67,n,f#68,n,f#69,n,f#70,n,a#71,n,a#72,n,f#73,n,f#74,n,f#75,n,f#76,n,f#77,n,f#78,n,f#79,n,f#80,n,f#81,n,f#82,n,f#83,n,f#84,n,a#85,n,f#86,n,f#87,n,f#88,n,f#89,n,f#90,n,f#91,n,f#92,n,f#93,n,f#94,n,f#95,n,f#96,n,f#97,n,f#98,n,a#99,n,f#100,n,f#101,n,f#102,n,f#103,n,f#104,n,f#105,n,f#106,n,f#107,n,f#108,n,f#109,n,f#110,n,f#111,n,f#112,n,a#113,n,f#114,n,f#115,n,f#116,n,f#117,n,f#118,n,f#119,n,f#120,n,f#121,n,f#122,n,f#123,n,f#124,n,f#125,n,f#126,n,a#127,n,f#128,n,f#129,n,f#130,n,f#131,n,f#132,n,f#133,n,f#134,n,f#135,n,f#136,n,f#137,n,f#138,n,f#139,n,f#140,n,a#141,n,f#142,n,f#143,n,f#144,n,f#145,n,f#146,n,f#147,n,f#148,n,f#149,n,f#150,n,f#151,n,f#152,n,f#153,n,f#154,n,a#155,n,f#156,n,f#157,n,f#158,n,f#159,n,f#160,n,f#161,n,f#162,n,f#163,n,f#164,n,f#165,n,f#166,n,f#167,n,f#168,n,a",
+                        "answers": [
+                            {
+                                "id": 3,
+                                "title": "Fold",
+                                "color": {
+                                    "key": "fold",
+                                    "value": "#E0E0E0"
+                                },
+                                "isRandom": "n",
+                                "value": "f"
+                            },
+                            {
+                                "id": 0,
+                                "title": "Call",
+                                "color": {
+                                    "key": "call",
+                                    "value": "#FFB74D"
+                                },
+                                "isRandom": "n",
+                                "value": "c"
+                            },
+                            {
+                                "id": 2,
+                                "title": "All-in",
+                                "factor": null,
+                                "color": {
+                                    "key": "all-in",
+                                    "value": "#4CAF50"
+                                },
+                                "isRandom": "n",
+                                "value": "a"
+                            },
+                            {
+                                "id": 1,
+                                "title": "Raise",
+                                "factor": 2.5,
+                                "color": {
+                                    "key": "raise2",
+                                    "value": "#7986CB"
+                                },
+                                "isRandom": "n",
+                                "value": "r"
+                            }
+                        ],
+                        "secondAction": null,
+                        "secondActionFactor": null,
+                        "id": 1325210
+                    }
+                ]
+            },
+            {
+                "id": 636311,
+                "rangeMin": 23,
+                "rangeMax": 23,
+                "easy": 1,
+                "normal": 1,
+                "hard": 1,
+                "charts": [
+                    {
+                        "combinations": "#0,n,r#1,y,a(50)-r#2,n,a#3,n,a#4,n,r#5,n,a#6,n,a#7,n,a#8,y,a(50)-r#9,n,a#10,n,a#11,n,r#12,n,r#13,n,a#14,n,r#15,n,a#16,n,a#17,n,a#18,n,a#19,n,f#20,n,f#21,n,f#22,n,f#23,n,f#24,n,f#25,n,f#26,n,a#27,n,a#28,n,r#29,n,a#30,n,a#31,n,a#32,n,f#33,n,f#34,n,f#35,n,f#36,n,f#37,n,f#38,n,f#39,n,a#40,y,r(50)-f#41,n,f#42,y,a(50)-r#43,n,a#44,n,a#45,n,f#46,n,f#47,n,f#48,n,f#49,n,f#50,n,f#51,n,f#52,n,a#53,n,f#54,n,f#55,n,f#56,n,a#57,n,a#58,n,f#59,n,f#60,n,f#61,n,f#62,n,f#63,n,f#64,n,f#65,y,a(50)-r#66,n,f#67,n,f#68,n,f#69,n,f#70,n,a#71,y,a(50)-r#72,n,f#73,n,f#74,n,f#75,n,f#76,n,f#77,n,f#78,n,f#79,n,f#80,n,f#81,n,f#82,n,f#83,n,f#84,n,a#85,n,f#86,n,f#87,n,f#88,n,f#89,n,f#90,n,f#91,n,f#92,n,f#93,n,f#94,n,f#95,n,f#96,n,f#97,n,f#98,n,a#99,n,f#100,n,f#101,n,f#102,n,f#103,n,f#104,n,f#105,n,f#106,n,f#107,n,f#108,n,f#109,n,f#110,n,f#111,n,f#112,n,a#113,n,f#114,n,f#115,n,f#116,n,f#117,n,f#118,n,f#119,n,f#120,n,f#121,n,f#122,n,f#123,n,f#124,n,f#125,n,f#126,n,a#127,n,f#128,n,f#129,n,f#130,n,f#131,n,f#132,n,f#133,n,f#134,n,f#135,n,f#136,n,f#137,n,f#138,n,f#139,n,f#140,n,a#141,n,f#142,n,f#143,n,f#144,n,f#145,n,f#146,n,f#147,n,f#148,n,f#149,n,f#150,n,f#151,n,f#152,n,f#153,n,f#154,n,a#155,n,f#156,n,f#157,n,f#158,n,f#159,n,f#160,n,f#161,n,f#162,n,f#163,n,f#164,n,f#165,n,f#166,n,f#167,n,f#168,n,a",
+                        "answers": [
+                            {
+                                "id": 3,
+                                "title": "Fold",
+                                "color": {
+                                    "key": "fold",
+                                    "value": "#E0E0E0"
+                                },
+                                "isRandom": "n",
+                                "value": "f"
+                            },
+                            {
+                                "id": 0,
+                                "title": "Call",
+                                "color": {
+                                    "key": "call",
+                                    "value": "#FFB74D"
+                                },
+                                "isRandom": "n",
+                                "value": "c"
+                            },
+                            {
+                                "id": 2,
+                                "title": "All-in",
+                                "factor": null,
+                                "color": {
+                                    "key": "all-in",
+                                    "value": "#4CAF50"
+                                },
+                                "isRandom": "n",
+                                "value": "a"
+                            },
+                            {
+                                "id": 1,
+                                "title": "Raise",
+                                "factor": 2.5,
+                                "color": {
+                                    "key": "raise2",
+                                    "value": "#7986CB"
+                                },
+                                "isRandom": "n",
+                                "value": "r"
+                            }
+                        ],
+                        "secondAction": null,
+                        "secondActionFactor": null,
+                        "id": 1325211
+                    }
+                ]
+            },
+            {
+                "id": 636312,
+                "rangeMin": 24,
+                "rangeMax": 24,
+                "easy": 1,
+                "normal": 1,
+                "hard": 1,
+                "charts": [
+                    {
+                        "combinations": "#0,n,r#1,n,r#2,y,a(50)-r#3,n,r#4,n,r#5,y,a(50)-c#6,n,r#7,n,a#8,y,a(50)-r#9,n,a#10,n,a#11,n,r#12,n,r#13,n,a#14,n,r#15,y,a(50)-r#16,n,a#17,y,a(50)-c#18,y,a(50)-c#19,n,f#20,n,f#21,n,f#22,n,f#23,n,f#24,n,f#25,n,f#26,n,a#27,n,a#28,n,r#29,n,a#30,n,a#31,y,a(50)-c#32,n,f#33,n,f#34,n,f#35,n,f#36,n,f#37,n,f#38,n,f#39,n,a#40,y,r(50)-f#41,n,f#42,n,r#43,n,a#44,n,a#45,n,f#46,n,f#47,n,f#48,n,f#49,n,f#50,n,f#51,n,f#52,n,a#53,n,f#54,n,f#55,n,f#56,n,a#57,n,a#58,n,f#59,n,f#60,n,f#61,n,f#62,n,f#63,n,f#64,n,f#65,y,a(50)-r#66,n,f#67,n,f#68,n,f#69,n,f#70,n,a#71,y,a(50)-r#72,n,f#73,n,f#74,n,f#75,n,f#76,n,f#77,n,f#78,n,f#79,n,f#80,n,f#81,n,f#82,n,f#83,n,f#84,n,a#85,n,f#86,n,f#87,n,f#88,n,f#89,n,f#90,n,f#91,n,f#92,n,f#93,n,f#94,n,f#95,n,f#96,n,f#97,n,f#98,n,a#99,n,f#100,n,f#101,n,f#102,n,f#103,n,f#104,n,f#105,n,f#106,n,f#107,n,f#108,n,f#109,n,f#110,n,f#111,n,f#112,n,a#113,n,f#114,n,f#115,n,f#116,n,f#117,n,f#118,n,f#119,n,f#120,n,f#121,n,f#122,n,f#123,n,f#124,n,f#125,n,f#126,n,a#127,n,f#128,n,f#129,n,f#130,n,f#131,n,f#132,n,f#133,n,f#134,n,f#135,n,f#136,n,f#137,n,f#138,n,f#139,n,f#140,n,a#141,n,f#142,n,f#143,n,f#144,n,f#145,n,f#146,n,f#147,n,f#148,n,f#149,n,f#150,n,f#151,n,f#152,n,f#153,n,f#154,n,a#155,n,f#156,n,f#157,n,f#158,n,f#159,n,f#160,n,f#161,n,f#162,n,f#163,n,f#164,n,f#165,n,f#166,n,f#167,n,f#168,n,a",
+                        "answers": [
+                            {
+                                "id": 3,
+                                "title": "Fold",
+                                "color": {
+                                    "key": "fold",
+                                    "value": "#E0E0E0"
+                                },
+                                "isRandom": "n",
+                                "value": "f"
+                            },
+                            {
+                                "id": 0,
+                                "title": "Call",
+                                "color": {
+                                    "key": "call",
+                                    "value": "#FFB74D"
+                                },
+                                "isRandom": "n",
+                                "value": "c"
+                            },
+                            {
+                                "id": 2,
+                                "title": "All-in",
+                                "factor": null,
+                                "color": {
+                                    "key": "all-in",
+                                    "value": "#4CAF50"
+                                },
+                                "isRandom": "n",
+                                "value": "a"
+                            },
+                            {
+                                "id": 1,
+                                "title": "Raise",
+                                "factor": 2.5,
+                                "color": {
+                                    "key": "raise2",
+                                    "value": "#7986CB"
+                                },
+                                "isRandom": "n",
+                                "value": "r"
+                            }
+                        ],
+                        "secondAction": null,
+                        "secondActionFactor": null,
+                        "id": 1325212
+                    }
+                ]
+            },
+            {
+                "id": 636313,
+                "rangeMin": 25,
+                "rangeMax": 99,
+                "easy": 1,
+                "normal": 1,
+                "hard": 1,
+                "charts": [
+                    {
+                        "combinations": "#0,n,r#1,n,r#2,y,a(50)-r#3,n,r#4,n,r#5,y,a(50)-c#6,n,r#7,n,a#8,y,r(50)-c#9,n,a#10,y,r(50)-c#11,y,r(50)-c#12,n,r#13,n,a#14,n,r#15,y,a(50)-r#16,n,a#17,y,a(50)-c#18,y,a(50)-c#19,n,f#20,n,f#21,n,f#22,n,f#23,n,f#24,n,f#25,n,f#26,n,a#27,n,a#28,n,r#29,n,a#30,n,a#31,y,a(50)-c#32,n,f#33,n,f#34,n,f#35,n,f#36,n,f#37,n,f#38,n,f#39,n,a#40,y,r(50)-f#41,n,f#42,n,r#43,n,a#44,n,a#45,n,f#46,n,f#47,n,f#48,n,f#49,n,f#50,n,f#51,n,f#52,n,a#53,n,f#54,n,f#55,n,f#56,y,a(50)-r#57,n,a#58,n,f#59,n,f#60,n,f#61,n,f#62,n,f#63,n,f#64,n,f#65,n,r#66,n,f#67,n,f#68,n,f#69,n,f#70,n,a#71,y,a(50)-r#72,n,f#73,n,f#74,n,f#75,n,f#76,n,f#77,n,f#78,n,f#79,n,f#80,n,f#81,n,f#82,n,f#83,n,f#84,n,a#85,n,f#86,n,f#87,n,f#88,n,f#89,n,f#90,n,f#91,n,f#92,n,f#93,n,f#94,n,f#95,n,f#96,n,f#97,n,f#98,n,a#99,n,f#100,n,f#101,n,f#102,n,f#103,n,f#104,n,f#105,n,f#106,n,f#107,n,f#108,n,f#109,n,f#110,n,f#111,n,f#112,n,a#113,n,f#114,n,f#115,n,f#116,n,f#117,n,f#118,n,f#119,n,f#120,n,f#121,n,f#122,n,f#123,n,f#124,n,f#125,n,f#126,n,a#127,n,f#128,n,f#129,n,f#130,n,f#131,n,f#132,n,f#133,n,f#134,n,f#135,n,f#136,n,f#137,n,f#138,n,f#139,n,f#140,y,a(50)-c#141,n,f#142,n,f#143,n,f#144,n,f#145,n,f#146,n,f#147,n,f#148,n,f#149,n,f#150,n,f#151,n,f#152,n,f#153,n,f#154,y,a(50)-c#155,n,f#156,n,f#157,n,f#158,n,f#159,n,f#160,n,f#161,n,f#162,n,f#163,n,f#164,n,f#165,n,f#166,n,f#167,n,f#168,y,a(50)-c",
+                        "answers": [
+                            {
+                                "id": 3,
+                                "title": "Fold",
+                                "color": {
+                                    "key": "fold",
+                                    "value": "#E0E0E0"
+                                },
+                                "isRandom": "n",
+                                "value": "f"
+                            },
+                            {
+                                "id": 0,
+                                "title": "Call",
+                                "color": {
+                                    "key": "call",
+                                    "value": "#FFB74D"
+                                },
+                                "isRandom": "n",
+                                "value": "c"
+                            },
+                            {
+                                "id": 2,
+                                "title": "All-in",
+                                "factor": null,
+                                "color": {
+                                    "key": "all-in",
+                                    "value": "#4CAF50"
+                                },
+                                "isRandom": "n",
+                                "value": "a"
+                            },
+                            {
+                                "id": 1,
+                                "title": "Raise",
+                                "factor": 2.5,
+                                "color": {
+                                    "key": "raise2",
+                                    "value": "#7986CB"
+                                },
+                                "isRandom": "n",
+                                "value": "r"
+                            }
+                        ],
+                        "secondAction": null,
+                        "secondActionFactor": null,
+                        "id": 1325213
+                    }
+                ]
+            }
+        ]
+    }
+}

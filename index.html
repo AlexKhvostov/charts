@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Галерея чартов (30)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; }
+    body { margin:0; font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif; background:#0f1419; color:#e8eaed; }
+    .page { max-width: 2560px; margin: 0 auto; padding: 20px; }
+    .legend { display:flex; flex-wrap: wrap; gap:8px; align-items:center; padding:10px 12px; border:1px solid #374151; border-radius:10px; background:#161b22; margin-bottom:16px; }
+    .legend-item { display:flex; align-items:center; gap:6px; font-size:12px; color:#e5e7eb; }
+    .legend-swatch { width:14px; height:14px; border-radius:3px; border:1px solid #2b3240; }
+    .grid { display:grid; grid-template-columns: repeat(auto-fit, minmax(600px, 1fr)); gap:16px; justify-items: center; }
+    .chart-cell { width: 600px; background:#1f2937; border:1px solid #374151; border-radius:12px; padding:12px; display:flex; justify-content:center; align-items:center; }
+    .chart-cell-inner { width: 100%; display:flex; justify-content:center; }
+    /* Минимально нужные стили матрицы */
+    .matrix-wrap { display:flex; flex-direction:column; align-items:center; gap:8px; padding:12px; border:1px solid #374151; border-radius:12px; background:#161b22; box-shadow: 0 4px 10px rgba(0,0,0,0.15); }
+    .matrix-title { width: 550px; text-align:center; font-size: .95rem; color:#e5e7eb; background:#7c7e82; border:1px solid #2b3240; border-radius:6px; padding:6px 8px; }
+    .matrix { display:grid; grid-template-columns: repeat(13, 1fr); grid-template-rows: repeat(13, 1fr); gap:1px; background:#e9ecef; border:2px solid #dee2e6; border-radius:8px; overflow:hidden; width:550px; height:550px; }
+    .cell { position:relative; display:flex; align-items:center; justify-content:center; min-height:40px; font-weight:700; color:#000; background:#f8f9fa; cursor:pointer; transition:transform .2s ease; border:1px solid transparent; }
+    .corner { position:absolute; width:16px; height:8px; border-radius:2px; display:flex; align-items:center; justify-content:center; font-size:.7em; font-weight:700; color:#000; }
+    .corner.tp { top:2px; left:2px; background:#7986CB; }
+    .corner.tr { top:2px; right:2px; background:#4CAF50; }
+    .corner.dl { bottom:2px; left:2px; background:#E0E0E0; }
+    .corner.dr { bottom:2px; right:2px; background:#FFB74D; }
+    .split-line { position:absolute; top:0; left:50%; width:2px; height:100%; background: rgba(0,0,0,.3); transform: translateX(-50%); }
+    @media (max-width: 700px){ .matrix, .matrix-title { width: 100%; max-width: 400px; } .chart-cell { width: 100%; } }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <div class="legend" id="legend"></div>
+    <div class="grid" id="grid"></div>
+  </div>
+
+  <script type="module">
+    import { ChartMatrix } from './js/components/ChartMatrix.js'
+    import { analyzeMatrix } from './js/utils/chartAnalyzer.js'
+
+    const legendEl = document.getElementById('legend')
+    const gridEl = document.getElementById('grid')
+
+    // Палитра и легенда действий
+    const defaultAnswers = [
+      { id: 3, title: 'Fold', value: 'f', color: { key:'fold', value:'#E0E0E0' } },
+      { id: 0, title: 'Call', value: 'c', color: { key:'call', value:'#FFB74D' } },
+      { id: 2, title: 'All-in', value: 'a', color: { key:'all-in', value:'#4CAF50' } },
+      { id: 1, title: 'Raise', value: 'r', color: { key:'raise', value:'#7986CB' } }
+    ]
+
+    function renderLegend(answers) {
+      legendEl.innerHTML = ''
+      for (const a of answers) {
+        const item = document.createElement('div')
+        item.className = 'legend-item'
+        const sw = document.createElement('div')
+        sw.className = 'legend-swatch'
+        sw.style.backgroundColor = a.color.value
+        item.appendChild(sw)
+        const span = document.createElement('span')
+        span.textContent = a.title
+        item.appendChild(span)
+        legendEl.appendChild(item)
+      }
+    }
+
+    async function loadManifest() {
+      const res = await fetch('./json_3408/manifest.json')
+      if (!res.ok) throw new Error('Manifest not found')
+      return res.json()
+    }
+
+    async function loadChart(fileName) {
+      const res = await fetch(`./json_3408/${encodeURIComponent(fileName)}`)
+      if (!res.ok) throw new Error(fileName)
+      return res.json()
+    }
+
+    function pickFirstChart(chartData) {
+      const stackRanges = chartData.chart.stackRanges || []
+      // Анализ для углов (учитывает только графы с secondAction===null и только уровни ниже базового)
+      const analysis = analyzeMatrix(chartData.chart)
+      const defaultId = analysis?.defaultRange?.id
+      const range = defaultId ? stackRanges.find(r => r.id == defaultId) : stackRanges[0]
+      const baseChart = range?.charts?.[0]
+      if (!baseChart) return null
+      const answers = baseChart.answers || chartData.chart.answers || defaultAnswers
+      return { ...baseChart, analysis: analysis?.analysis || {}, answers }
+    }
+
+    async function renderGrid() {
+      renderLegend(defaultAnswers)
+      const files = await loadManifest()
+      for (const file of files) {
+        try {
+          const data = await loadChart(file)
+          const chart = pickFirstChart(data)
+          if (!chart) continue
+          const cell = document.createElement('div')
+          cell.className = 'chart-cell'
+          const inner = document.createElement('div')
+          inner.className = 'chart-cell-inner'
+          const title = data.chart?.title || file
+          inner.appendChild(ChartMatrix({ chart, answers: chart.answers, title, onCellClick: null }))
+          cell.appendChild(inner)
+          gridEl.appendChild(cell)
+        } catch (e) {
+          // пропускаем битые файлы
+        }
+      }
+    }
+
+    renderGrid()
+  </script>
+</body>
+</html>
+
+

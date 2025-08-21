@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Покерный Чарт Вьюер</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .controls {
+            background: #f8f9fa;
+            padding: 20px;
+            border-bottom: 1px solid #e9ecef;
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .control-group {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+
+        .control-group label {
+            font-weight: 600;
+            color: #495057;
+            font-size: 0.9em;
+        }
+
+        select, button {
+            padding: 10px 15px;
+            border: 2px solid #e9ecef;
+            border-radius: 8px;
+            font-size: 1em;
+            background: white;
+            transition: all 0.3s ease;
+        }
+
+        select:focus, button:focus {
+            outline: none;
+            border-color: #667eea;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+        }
+
+        button {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-weight: 600;
+        }
+
+        button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+        }
+
+        .chart-info {
+            background: #e3f2fd;
+            padding: 15px 20px;
+            border-left: 4px solid #2196f3;
+            margin: 20px;
+            border-radius: 8px;
+        }
+
+        .chart-container {
+            padding: 20px;
+            overflow-x: auto;
+            display: flex;
+            justify-content: center;
+        }
+
+        /* Улучшенная сетка на основе оригинального приложения */
+        .poker-matrix {
+            max-width: 550px;
+            max-height: 400px;
+            display: grid;
+            grid-template-columns: repeat(13, 1fr);
+            gap: 1px;
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            font-family: "Graphik", 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-weight: 400;
+            font-style: light;
+        }
+
+        /* Улучшенные стили ячеек на основе оригинального приложения */
+        .cell {
+            border-radius: 10%;
+            border: 1px solid black;
+            cursor: pointer;
+            user-select: none;
+            text-align: center;
+            box-sizing: border-box;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            overflow: hidden;
+        }
+
+        /* Адаптивные размеры ячеек на основе оригинального приложения */
+        @media (min-width: 360px) {
+            .cell {
+                width: 25px;
+                height: 24px;
+                font-size: 9px;
+            }
+        }
+
+        @media (min-width: 480px) {
+            .cell {
+                width: 26px;
+                height: 26px;
+                font-size: 10px;
+            }
+        }
+
+        @media (min-width: 720px) {
+            .cell {
+                width: 32px;
+                height: 28px;
+                font-size: 11px;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .cell {
+                width: 38px;
+                height: 30px;
+                font-size: 12px;
+            }
+        }
+
+        @media (min-width: 1280px) {
+            .cell {
+                width: 42px;
+                height: 30px;
+                font-size: 14px;
+            }
+        }
+
+        .cell:hover {
+            transform: scale(1.05);
+            z-index: 10;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
+
+        /* Стили для разделенных ячеек */
+        .cell.split {
+            background: linear-gradient(90deg, var(--color1) 50%, var(--color2) 50%);
+        }
+
+        .cell.single {
+            background: var(--color);
+        }
+
+        /* Зоны внутри ячеек (для разделенных ячеек) */
+        .cell-zone {
+            height: 100%;
+            display: inline-block;
+            box-sizing: border-box;
+        }
+
+        /* Заголовок ячейки */
+        .cell-label {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 99;
+            color: rgba(255,255,255,0.9);
+            font-weight: 600;
+        }
+
+        /* Стиль для подписанных ячеек */
+        .cell.signed {
+            transform: scale(1.75);
+            border: 1px solid white;
+            color: white !important;
+            z-index: 1000;
+        }
+
+        .legend {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 10px;
+            margin: 20px;
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .legend-color {
+            width: 20px;
+            height: 20px;
+            border-radius: 4px;
+        }
+
+        .loading {
+            text-align: center;
+            padding: 50px;
+            font-size: 1.2em;
+            color: #666;
+        }
+
+        .error {
+            background: #ffebee;
+            color: #c62828;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px;
+            border-left: 4px solid #f44336;
+        }
+
+        /* Дополнительные стили для лучшего отображения */
+        .chart-actions {
+            display: flex;
+            flex-direction: column;
+            margin-left: 50px;
+        }
+
+        .chart-actions-title {
+            margin-bottom: 20px;
+            color: #495057;
+            font-weight: 600;
+        }
+
+        @media (max-width: 768px) {
+            .controls {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            
+            .poker-matrix {
+                max-width: 100%;
+                font-size: 0.7em;
+            }
+
+            .chart-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .chart-actions {
+                margin-left: 0;
+                margin-top: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🎰 Покерный Чарт Вьюер</h1>
+            <p>Визуализация стратегий игры в покер</p>
+        </div>
+
+        <div class="controls">
+            <div class="control-group">
+                <label for="stackRange">Диапазон стеков:</label>
+                <select id="stackRange">
+                    <option value="">Выберите диапазон...</option>
+                </select>
+            </div>
+
+            <div class="control-group">
+                <label for="difficulty">Уровень сложности:</label>
+                <select id="difficulty">
+                    <option value="easy">Легкий</option>
+                    <option value="normal" selected>Нормальный</option>
+                    <option value="hard">Сложный</option>
+                </select>
+            </div>
+
+            <div class="control-group">
+                <label for="chartType">Тип чарта:</label>
+                <select id="chartType">
+                    <option value="0" selected>Первый чарт</option>
+                </select>
+            </div>
+
+            <button onclick="loadChart()">Загрузить чарт</button>
+        </div>
+
+        <div id="chartInfo" class="chart-info" style="display: none;">
+            <h3>Информация о чарте</h3>
+            <div id="chartDetails"></div>
+        </div>
+
+        <div id="chartContainer" class="chart-container">
+            <div class="loading">Выберите параметры и нажмите "Загрузить чарт"</div>
+        </div>
+
+        <div class="legend">
+            <div class="legend-item">
+                <div class="legend-color" style="background: #7986CB;"></div>
+                <span>Raise (r)</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color" style="background: #8D6E63;"></div>
+                <span>Raise2 (r2)</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color" style="background: #FFB74D;"></div>
+                <span>Check/Call (ch/c)</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color" style="background: #4CAF50;"></div>
+                <span>All-in (a)</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color" style="background: #E0E0E0;"></div>
+                <span>Fold (f)</span>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let chartData = null;
+        const cardRanks = ['A', 'K', 'Q', 'J', 'T', '9', '8', '7', '6', '5', '4', '3', '2'];
+        const colorMap = {
+            'r': '#7986CB',
+            'r2': '#8D6E63', 
+            'ch': '#FFB74D',
+            'c': '#FFB74D',
+            'a': '#4CAF50',
+            'f': '#E0E0E0'
+        };
+
+        // Загрузка JSON файла
+        async function loadJSON() {
+            try {
+                const response = await fetch('45431.json');
+                chartData = await response.json();
+                populateControls();
+            } catch (error) {
+                showError('Ошибка загрузки JSON файла: ' + error.message);
+            }
+        }
+
+        // Заполнение контролов данными из JSON
+        function populateControls() {
+            const stackRangeSelect = document.getElementById('stackRange');
+            const chartTypeSelect = document.getElementById('chartType');
+            
+            stackRangeSelect.innerHTML = '<option value="">Выберите диапазон...</option>';
+            
+            chartData.chart.stackRanges.forEach((range, index) => {
+                const option = document.createElement('option');
+                option.value = index;
+                option.textContent = `${range.rangeMin}-${range.rangeMax} BB`;
+                stackRangeSelect.appendChild(option);
+            });
+
+            // Обновляем типы чартов при выборе диапазона
+            stackRangeSelect.addEventListener('change', updateChartTypes);
+        }
+
+        // Обновление типов чартов
+        function updateChartTypes() {
+            const stackRangeIndex = document.getElementById('stackRange').value;
+            const chartTypeSelect = document.getElementById('chartType');
+            
+            if (stackRangeIndex === '') {
+                chartTypeSelect.innerHTML = '<option value="0">Первый чарт</option>';
+                return;
+            }
+
+            const range = chartData.chart.stackRanges[stackRangeIndex];
+            chartTypeSelect.innerHTML = '';
+            
+            range.charts.forEach((chart, index) => {
+                const option = document.createElement('option');
+                option.value = index;
+                option.textContent = `Чарт ${index + 1}`;
+                chartTypeSelect.appendChild(option);
+            });
+        }
+
+        // Загрузка и отображение чарта
+        function loadChart() {
+            const stackRangeIndex = document.getElementById('stackRange').value;
+            const difficulty = document.getElementById('difficulty').value;
+            const chartTypeIndex = document.getElementById('chartType').value;
+
+            if (stackRangeIndex === '') {
+                showError('Пожалуйста, выберите диапазон стеков');
+                return;
+            }
+
+            const range = chartData.chart.stackRanges[stackRangeIndex];
+            const chart = range.charts[chartTypeIndex];
+
+            if (!chart) {
+                showError('Чарт не найден');
+                return;
+            }
+
+            displayChart(chart, range);
+        }
+
+        // Отображение чарта
+        function displayChart(chart, range) {
+            const container = document.getElementById('chartContainer');
+            const info = document.getElementById('chartInfo');
+            const details = document.getElementById('chartDetails');
+
+            // Показываем информацию о чарте
+            details.innerHTML = `
+                <p><strong>Диапазон стеков:</strong> ${range.rangeMin}-${range.rangeMax} BB</p>
+                <p><strong>Доступные действия:</strong> ${chart.answers.map(a => a.title).join(', ')}</p>
+                <p><strong>Количество ячеек:</strong> ${chart.combinations.split('#').length - 1}</p>
+            `;
+            info.style.display = 'block';
+
+            // Создаем контейнер для чарта и действий
+            const chartWrapper = document.createElement('div');
+            chartWrapper.style.display = 'flex';
+            chartWrapper.style.alignItems = 'flex-start';
+            chartWrapper.style.gap = '20px';
+
+            // Создаем матрицу
+            const matrix = document.createElement('div');
+            matrix.className = 'poker-matrix';
+
+            // Добавляем ячейки матрицы
+            for (let i = 0; i < 13; i++) {
+                for (let j = 0; j < 13; j++) {
+                    const cell = document.createElement('div');
+                    cell.className = 'cell';
+                    
+                    // Определяем комбинацию карт
+                    const card1 = cardRanks[i];
+                    const card2 = cardRanks[j];
+                    let combination = '';
+                    
+                    if (i === j) {
+                        combination = card1 + card1; // Пара
+                    } else if (i < j) {
+                        combination = card1 + card2 + 's'; // Суит
+                    } else {
+                        combination = card2 + card1 + 'o'; // Офф-суит
+                    }
+
+                    // Находим данные для этой ячейки
+                    const cellIndex = i * 13 + j;
+                    const cellData = parseCellData(chart.combinations, cellIndex);
+                    
+                    if (cellData) {
+                        applyCellStyle(cell, cellData, combination);
+                    } else {
+                        cell.style.background = '#f0f0f0';
+                        cell.textContent = combination;
+                    }
+                }
+            }
+
+            // Создаем панель действий
+            const actionsPanel = document.createElement('div');
+            actionsPanel.className = 'chart-actions';
+            
+            const actionsTitle = document.createElement('div');
+            actionsTitle.className = 'chart-actions-title';
+            actionsTitle.textContent = 'Доступные действия:';
+            actionsPanel.appendChild(actionsTitle);
+
+            chart.answers.forEach(answer => {
+                const actionItem = document.createElement('div');
+                actionItem.style.display = 'flex';
+                actionItem.style.alignItems = 'center';
+                actionItem.style.gap = '8px';
+                actionItem.style.marginBottom = '8px';
+                
+                const colorBox = document.createElement('div');
+                colorBox.style.width = '16px';
+                colorBox.style.height = '16px';
+                colorBox.style.borderRadius = '2px';
+                colorBox.style.backgroundColor = colorMap[answer.value] || '#ccc';
+                
+                actionItem.appendChild(colorBox);
+                actionItem.appendChild(document.createTextNode(answer.title));
+                actionsPanel.appendChild(actionItem);
+            });
+
+            chartWrapper.appendChild(matrix);
+            chartWrapper.appendChild(actionsPanel);
+
+            container.innerHTML = '';
+            container.appendChild(chartWrapper);
+        }
+
+        // Парсинг данных ячейки
+        function parseCellData(combinations, cellIndex) {
+            const cells = combinations.split('#').filter(cell => cell.trim());
+            
+            for (const cell of cells) {
+                const parts = cell.split(',');
+                if (parts[0] == cellIndex) {
+                    return {
+                        isSplit: parts[1] === 'y',
+                        colors: parts[2].split('-'),
+                        percentages: parts[2].includes('(') ? 
+                            parts[2].match(/\((\d+)\)/g).map(p => parseInt(p.slice(1, -1))) : 
+                            [100]
+                    };
+                }
+            }
+            return null;
+        }
+
+        // Применение стилей к ячейке
+        function applyCellStyle(cell, data, combination) {
+            const label = document.createElement('div');
+            label.className = 'cell-label';
+            label.textContent = combination;
+            cell.appendChild(label);
+
+            if (data.isSplit && data.colors.length > 1) {
+                cell.className = 'cell split';
+                const color1 = colorMap[data.colors[0].split('(')[0]] || '#ccc';
+                const color2 = colorMap[data.colors[1]] || '#ccc';
+                cell.style.setProperty('--color1', color1);
+                cell.style.setProperty('--color2', color2);
+            } else {
+                cell.className = 'cell single';
+                const color = colorMap[data.colors[0]] || '#ccc';
+                cell.style.setProperty('--color', color);
+            }
+
+            // Добавляем тултип с информацией
+            const tooltip = `${combination}: ${data.colors.join(' + ')}`;
+            cell.title = tooltip;
+
+            // Добавляем обработчик клика для увеличения ячейки
+            cell.addEventListener('click', function() {
+                // Убираем увеличение у всех ячеек
+                document.querySelectorAll('.cell').forEach(c => c.classList.remove('signed'));
+                // Добавляем увеличение к текущей ячейке
+                this.classList.add('signed');
+            });
+        }
+
+        // Показ ошибки
+        function showError(message) {
+            const container = document.getElementById('chartContainer');
+            container.innerHTML = `<div class="error">${message}</div>`;
+        }
+
+        // Инициализация при загрузке страницы
+        document.addEventListener('DOMContentLoaded', loadJSON);
+    </script>
+</body>
+</html> 

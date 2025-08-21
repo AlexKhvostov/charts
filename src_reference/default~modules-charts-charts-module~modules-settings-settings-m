@@ -1,0 +1,462 @@
+(window["webpackJsonp"] = window["webpackJsonp"] || []).push([["default~modules-charts-charts-module~modules-settings-settings-module~modules-training-training-module"],{
+
+/***/ "./src/app/modules/charts/services/charts.service.ts":
+/*!***********************************************************!*\
+  !*** ./src/app/modules/charts/services/charts.service.ts ***!
+  \***********************************************************/
+/*! exports provided: ChartsService */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ChartsService", function() { return ChartsService; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm5/index.js");
+/* harmony import */ var _services_api_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../services/api.service */ "./src/app/services/api.service.ts");
+/* harmony import */ var _services_default_data_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../services/default-data.service */ "./src/app/services/default-data.service.ts");
+
+
+
+
+
+var ChartsService = /** @class */ (function () {
+    function ChartsService(apiService, defaultDataService) {
+        this.apiService = apiService;
+        this.defaultDataService = defaultDataService;
+        this.gameTypes = [
+            {
+                id: 1,
+                title: '3-max',
+                positions: [
+                    {
+                        id: 2,
+                        title: 'btn',
+                        actions: []
+                    },
+                    {
+                        id: 0,
+                        title: 'sb',
+                        actions: [
+                            {
+                                id: 0,
+                                title: 'vs btn limp'
+                            },
+                            {
+                                id: 1,
+                                title: 'vs btn mr'
+                            },
+                            {
+                                id: 20,
+                                title: 'vs btn 2.5x'
+                            },
+                            {
+                                id: 14,
+                                title: 'vs btn 3x'
+                            },
+                            {
+                                id: 2,
+                                title: 'vs btn os'
+                            },
+                            {
+                                id: 3,
+                                title: 'vs bb'
+                            },
+                        ]
+                    },
+                    {
+                        id: 1,
+                        title: 'bb',
+                        actions: [
+                            {
+                                id: 0,
+                                title: 'vs btn limp'
+                            },
+                            {
+                                id: 1,
+                                title: 'vs btn mr'
+                            },
+                            {
+                                id: 2,
+                                title: 'vs btn os'
+                            },
+                            {
+                                id: 4,
+                                title: 'vs 3w limp'
+                            },
+                            {
+                                id: 5,
+                                title: 'vs mr (3w)'
+                            },
+                            {
+                                id: 6,
+                                title: 'vs sb limp'
+                            },
+                            {
+                                id: 7,
+                                title: 'vs sb mr'
+                            },
+                            {
+                                id: 8,
+                                title: 'vs sb os'
+                            },
+                            {
+                                id: 12,
+                                title: 'vs sb 3x'
+                            },
+                            {
+                                id: 14,
+                                title: 'vs btn 3x'
+                            },
+                            {
+                                id: 16,
+                                title: 'vs mr + all-in'
+                            },
+                            {
+                                id: 17,
+                                title: 'vs os + all-in'
+                            },
+                            {
+                                id: 18,
+                                title: 'vs os + call'
+                            },
+                            {
+                                id: 19,
+                                title: 'vs sb 2.5x'
+                            },
+                            {
+                                id: 20,
+                                title: 'vs btn 2.5x'
+                            },
+                        ]
+                    }
+                ],
+                opponentsTypes: [
+                    { id: 3, type: 'fish + fish' },
+                    { id: 4, type: 'reg + reg' },
+                ]
+            },
+            {
+                id: 2,
+                title: 'hu',
+                positions: [
+                    {
+                        id: 0,
+                        title: 'sb',
+                        actions: [],
+                    },
+                    {
+                        id: 1,
+                        title: 'bb',
+                        actions: [
+                            {
+                                id: 9,
+                                title: 'vs limp'
+                            },
+                            {
+                                id: 10,
+                                title: 'vs mr'
+                            },
+                            {
+                                id: 11,
+                                title: 'vs os'
+                            },
+                            {
+                                id: 13,
+                                title: 'vs 3x'
+                            },
+                            {
+                                id: 21,
+                                title: 'vs 2.5x'
+                            },
+                        ],
+                    }
+                ],
+                opponentsTypes: [
+                    { id: 0, type: 'fish' },
+                    { id: 1, type: 'reg' }
+                ]
+            }
+        ];
+        this.heroStacks = [
+            {
+                id: 1,
+                title: '5',
+                stackParams: [
+                    { title: '5-10-10', first: 5, second: 10, third: 10 },
+                    { title: '5-15-15', first: 5, second: 15, third: 15 },
+                    { title: '5-20-20', first: 5, second: 20, third: 20 },
+                    { title: '5-25-25', first: 5, second: 25, third: 25 },
+                ]
+            },
+            {
+                id: 2,
+                title: '10',
+                stackParams: [
+                    { title: '10-5-10', first: 10, second: 5, third: 10 },
+                    { title: '10-10-5', first: 10, second: 10, third: 5 },
+                    { title: '10-15-15', first: 10, second: 15, third: 15 },
+                    { title: '10-20-20', first: 10, second: 20, third: 20 },
+                    { title: '10-25-25', first: 10, second: 25, third: 25 },
+                    { title: '10-10-10', first: 10, second: 10, third: 10 },
+                ]
+            },
+            {
+                id: 3,
+                title: '15',
+                stackParams: [
+                    { title: '15-5-15', first: 15, second: 5, third: 15 },
+                    { title: '15-10-15', first: 15, second: 10, third: 15 },
+                    { title: '15-15-5', first: 15, second: 15, third: 5 },
+                    { title: '15-15-10', first: 15, second: 15, third: 10 },
+                    { title: '15-20-20', first: 15, second: 20, third: 20 },
+                    { title: '15-25-25', first: 15, second: 25, third: 25 },
+                    { title: '15-15-15', first: 15, second: 15, third: 15 },
+                ]
+            },
+            {
+                id: 4,
+                title: '20',
+                stackParams: [
+                    { title: '20-5-20', first: 20, second: 5, third: 20 },
+                    { title: '20-10-20', first: 20, second: 10, third: 20 },
+                    { title: '20-15-20', first: 20, second: 15, third: 20 },
+                    { title: '20-20-5', first: 20, second: 20, third: 5 },
+                    { title: '20-20-10', first: 20, second: 20, third: 10 },
+                    { title: '20-20-15', first: 20, second: 20, third: 15 },
+                    { title: '20-25-25', first: 20, second: 25, third: 25 },
+                    { title: '20-20-20', first: 20, second: 20, third: 20 },
+                ]
+            },
+            {
+                id: 5,
+                title: '25',
+                stackParams: [
+                    { title: '25-5-25', first: 25, second: 5, third: 25 },
+                    { title: '25-10-25', first: 25, second: 10, third: 25 },
+                    { title: '25-15-25', first: 25, second: 15, third: 25 },
+                    { title: '25-20-25', first: 25, second: 20, third: 25 },
+                    { title: '25-25-5', first: 25, second: 25, third: 5 },
+                    { title: '25-25-10', first: 25, second: 25, third: 10 },
+                    { title: '25-25-15', first: 25, second: 25, third: 15 },
+                    { title: '25-25-20', first: 25, second: 25, third: 20 },
+                    { title: '25-25-25', first: 25, second: 25, third: 25 },
+                ]
+            },
+        ];
+        this.savedRanges = undefined;
+        this.savedAsymmetricRanges = undefined;
+    }
+    ChartsService.prototype.getGameTypes = function () {
+        return Object(rxjs__WEBPACK_IMPORTED_MODULE_2__["of"])(this.gameTypes);
+    };
+    ChartsService.prototype.getPositions = function (gameTypeSelected) {
+        var foundGameType = this.gameTypes.find(function (gameType) {
+            return gameTypeSelected.id === gameType.id;
+        });
+        return Object(rxjs__WEBPACK_IMPORTED_MODULE_2__["of"])(foundGameType.positions);
+    };
+    ChartsService.prototype.getOpponentsTypes = function (gameTypeSelected) {
+        var foundGameType = this.gameTypes.find(function (gameType) {
+            return gameTypeSelected.id === gameType.id;
+        });
+        return Object(rxjs__WEBPACK_IMPORTED_MODULE_2__["of"])(foundGameType.opponentsTypes);
+    };
+    ChartsService.prototype.getHeroStacks = function () {
+        return Object(rxjs__WEBPACK_IMPORTED_MODULE_2__["of"])(this.heroStacks);
+    };
+    ChartsService.prototype.getActions = function (gameTypeSelected, positionSelected) {
+        var foundGameType = this.gameTypes.find(function (gameType) {
+            return gameTypeSelected.id === gameType.id;
+        });
+        var foundPosition = foundGameType.positions.find(function (position) {
+            return positionSelected.id === position.id;
+        });
+        return Object(rxjs__WEBPACK_IMPORTED_MODULE_2__["of"])(foundPosition.actions);
+    };
+    ChartsService.prototype.getDefaultCombinations = function () {
+        return this.defaultDataService.getDefaultCombinations();
+    };
+    ChartsService.prototype.getDefaultAnswers = function () {
+        return [
+            { id: 3, title: 'Fold', color: { key: 'fold', value: _services_default_data_service__WEBPACK_IMPORTED_MODULE_4__["ActionColors"].FOLD }, isRandom: 'n', value: 'f' },
+            { id: 0, title: 'Call', color: { key: 'call', value: _services_default_data_service__WEBPACK_IMPORTED_MODULE_4__["ActionColors"].CALL }, isRandom: 'n', value: 'c' },
+            { id: 1, title: 'Raise', color: { key: 'raise', value: _services_default_data_service__WEBPACK_IMPORTED_MODULE_4__["ActionColors"].RAISE }, factor: 2, isRandom: 'n', value: 'r' },
+            { id: 2, title: 'All-in', color: { key: 'all-in', value: _services_default_data_service__WEBPACK_IMPORTED_MODULE_4__["ActionColors"].ALLIN }, isRandom: 'n', value: 'a' }
+        ];
+    };
+    ChartsService.prototype.getDefaultVs3bet = function () {
+        return [
+            { id: 3, title: 'Fold', color: { key: 'fold', value: _services_default_data_service__WEBPACK_IMPORTED_MODULE_4__["ActionColors"].FOLD }, isRandom: 'n', value: 'f' },
+            { id: 0, title: 'Call', color: { key: 'call', value: _services_default_data_service__WEBPACK_IMPORTED_MODULE_4__["ActionColors"].CALL }, isRandom: 'n', value: 'c' },
+            { id: 2, title: 'All-in', color: { key: 'all-in', value: _services_default_data_service__WEBPACK_IMPORTED_MODULE_4__["ActionColors"].ALLIN }, isRandom: 'n', value: 'a' }
+        ];
+    };
+    ChartsService.prototype.getDefaultVsAll = function () {
+        return [
+            { id: 3, title: 'Fold', color: { key: 'fold', value: _services_default_data_service__WEBPACK_IMPORTED_MODULE_4__["ActionColors"].FOLD }, isRandom: 'n', value: 'f' },
+            { id: 0, title: 'Call', color: { key: 'call', value: _services_default_data_service__WEBPACK_IMPORTED_MODULE_4__["ActionColors"].CALL }, isRandom: 'n', value: 'c' }
+        ];
+    };
+    ChartsService.prototype.createLesson = function (newLesson) {
+        return this.apiService.createLesson(newLesson);
+    };
+    ChartsService.prototype.createAsymmetricLesson = function (newAsymmetricLesson) {
+        return this.apiService.createAsymmetricLesson(newAsymmetricLesson);
+    };
+    ChartsService.prototype.createMixedLesson = function (newLesson) {
+        return this.apiService.createMixedLesson(newLesson);
+    };
+    ChartsService.prototype.saveMixLessonAsymmetric = function (newLesson) {
+        return this.apiService.saveMixLessonAsymmetric(newLesson);
+    };
+    ChartsService.prototype.deletePack = function (packId) {
+        return this.apiService.deletePack(packId);
+    };
+    ChartsService.prototype.copyPack = function (packId, title) {
+        return this.apiService.copyPack(packId, title);
+    };
+    ChartsService.prototype.editPack = function (packId, title) {
+        return this.apiService.editPack(packId, title);
+    };
+    ChartsService.prototype.deleteLesson = function (lessonId) {
+        return this.apiService.deleteLesson(lessonId);
+    };
+    ChartsService.prototype.deleteMixedLesson = function (lessonId) {
+        return this.apiService.deleteMixedLesson(lessonId);
+    };
+    ChartsService.prototype.getChartGroup = function (groupId, userId, type) {
+        if (type && type === 1) {
+            return this.getAsymmetricChartGroup(groupId, userId);
+        }
+        else {
+            return this.apiService.getChartGroup(groupId, userId);
+        }
+    };
+    ChartsService.prototype.getAsymmetricChartGroup = function (groupId, userId) {
+        return this.apiService.getAsymmetricChartGroup(groupId, userId);
+    };
+    ChartsService.prototype.getChapters = function (groupChartId) {
+        return this.apiService.getChapters(groupChartId);
+    };
+    // getAsymmetricChapters(groupChartId: string | number): Observable<Chapter[]> {
+    //   return this.apiService.getAsymmetricChapters(groupChartId);
+    // }
+    ChartsService.prototype.getChartGroups = function (userId) {
+        return this.apiService.getChartGroups(userId);
+    };
+    ChartsService.prototype.getChartById = function (id) {
+        return this.apiService.getChartById(id);
+    };
+    ChartsService.prototype.getAsymmetricChartById = function (id) {
+        return this.apiService.getAsymmetricChartById(id);
+    };
+    ChartsService.prototype.getMixedChartById = function (id) {
+        return this.apiService.getMixedChartById(id);
+    };
+    ChartsService.prototype.getMixedAsymmetricChartById = function (id) {
+        return this.apiService.getMixedAsymmetricChartById(id);
+    };
+    ChartsService.prototype.createChartGroup = function (chartPack) {
+        return this.apiService.createChartGroup(chartPack);
+    };
+    ChartsService.prototype.getFlashAnswer = function (packId, effectiveStack, hand) {
+        return this.apiService.getFlashAnswer(packId, effectiveStack, hand);
+    };
+    ChartsService.prototype.saveRanges = function (ranges) {
+        this.savedRanges = ranges;
+    };
+    ChartsService.prototype.getSavedRanges = function () {
+        return this.savedRanges;
+    };
+    ChartsService.prototype.saveAsymmetricRanges = function (ranges) {
+        this.savedAsymmetricRanges = ranges;
+    };
+    ChartsService.prototype.getSavedAsymmetricRanges = function () {
+        return this.savedAsymmetricRanges;
+    };
+    ChartsService.prototype.saveChapters = function (chapters, groupChartId) {
+        return this.apiService.saveChapters(chapters, groupChartId);
+    };
+    ChartsService.prototype.clearSavedRanges = function () {
+        this.savedRanges = undefined;
+    };
+    ChartsService.prototype.getAsymmetricRangesLesson = function (position, heroStack) {
+        switch (position.id) {
+            case 0:
+                return this.getSbStack(position, heroStack);
+            case 1:
+                return this.getBbStack(position, heroStack);
+            case 2:
+                return this.getBtnStack(position, heroStack);
+        }
+    };
+    ChartsService.prototype.getSbStack = function (selectedPosition, heroStack) {
+        var _this = this;
+        var stack = heroStack.stackParams.map(function (stackParam) {
+            return {
+                title: stackParam.title,
+                sb: stackParam.first,
+                bb: stackParam.second,
+                btn: stackParam.third,
+                combinations: _this.defaultDataService.getEmptyChart(),
+                answers: _this.getDefaultAnswers(),
+                easy: 1,
+                normal: 1,
+                hard: 1,
+            };
+        });
+        return stack;
+    };
+    ChartsService.prototype.getBbStack = function (selectedPosition, heroStack) {
+        var _this = this;
+        var stack = heroStack.stackParams.map(function (stackParam) {
+            return {
+                title: stackParam.title,
+                bb: stackParam.first,
+                btn: stackParam.second,
+                sb: stackParam.third,
+                combinations: _this.defaultDataService.getEmptyChart(),
+                answers: _this.getDefaultAnswers(),
+                easy: 1,
+                normal: 1,
+                hard: 1,
+            };
+        });
+        return stack;
+    };
+    ChartsService.prototype.getBtnStack = function (selectedPosition, heroStack) {
+        var _this = this;
+        var stack = heroStack.stackParams.map(function (stackParam) {
+            return {
+                title: stackParam.title,
+                btn: stackParam.first,
+                sb: stackParam.second,
+                bb: stackParam.third,
+                combinations: _this.defaultDataService.getEmptyChart(),
+                answers: _this.getDefaultAnswers(),
+                easy: 1,
+                normal: 1,
+                hard: 1,
+            };
+        });
+        return stack;
+    };
+    ChartsService.ctorParameters = function () { return [
+        { type: _services_api_service__WEBPACK_IMPORTED_MODULE_3__["ApiService"] },
+        { type: _services_default_data_service__WEBPACK_IMPORTED_MODULE_4__["DefaultDataService"] }
+    ]; };
+    ChartsService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
+            providedIn: 'root'
+        })
+    ], ChartsService);
+    return ChartsService;
+}());
+
+
+
+/***/ })
+
+}]);
+//# sourceMappingURL=default~modules-charts-charts-module~modules-settings-settings-module~modules-training-training-module.js.map
