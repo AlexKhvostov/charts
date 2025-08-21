@@ -24,4 +24,8 @@ Desktop.ini
 # Misc logs
 *.log
 
+# Local configs
+configs/config.local.json
+configs/*.local.json
+
 
