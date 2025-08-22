@@ -39,12 +39,10 @@
 
   <script type="module">
     import { ChartMatrix } from './js/components/ChartMatrix.js'
-    import { analyzeMatrix } from './js/utils/chartAnalyzer.js'
 
     const legendEl = document.getElementById('legend')
     const gridEl = document.getElementById('grid')
 
-    // Палитра и легенда действий
     const defaultAnswers = [
       { id: 3, title: 'Fold', value: 'f', color: { key:'fold', value:'#E0E0E0' } },
       { id: 0, title: 'Call', value: 'c', color: { key:'call', value:'#FFB74D' } },
@@ -68,49 +66,51 @@
       }
     }
 
-    async function loadManifest() {
-      const res = await fetch('./json_3408/manifest.json')
-      if (!res.ok) throw new Error('Manifest not found')
+    async function loadProcessed(){
+      const res = await fetch('./processed/processed.json')
+      if(!res.ok) throw new Error('processed.json not found')
       return res.json()
     }
 
-    async function loadChart(fileName) {
-      const res = await fetch(`./json_3408/${encodeURIComponent(fileName)}`)
-      if (!res.ok) throw new Error(fileName)
-      return res.json()
+    function buildCombinationsString(cellList, rangeId){
+      const parts = []
+      for(const cell of cellList){
+        const actions = cell.actionsByRange?.[rangeId]
+        if(!actions || actions.length === 0) continue
+        const isSplit = actions.length > 1 ? 'y' : 'n'
+        const spec = actions.map(a => a.percent && a.percent !== 100 ? `${a.code}(${a.percent})` : a.code).join('-')
+        parts.push(`#${cell.cellIndex},${isSplit},${spec}`)
+      }
+      return parts.join('')
     }
 
-    function pickFirstChart(chartData) {
-      const stackRanges = chartData.chart.stackRanges || []
-      // Анализ для углов (учитывает только графы с secondAction===null и только уровни ниже базового)
-      const analysis = analyzeMatrix(chartData.chart)
-      const defaultId = analysis?.defaultRange?.id
-      const range = defaultId ? stackRanges.find(r => r.id == defaultId) : stackRanges[0]
-      const baseChart = range?.charts?.[0]
-      if (!baseChart) return null
-      const answers = baseChart.answers || chartData.chart.answers || defaultAnswers
-      return { ...baseChart, analysis: analysis?.analysis || {}, answers }
+    function analysisToMap(cellList){
+      const map = {}
+      for(const cell of cellList){
+        map[cell.cellIndex] = cell.analysis || { fold:null, call:null, allin:null, raise:null }
+      }
+      return map
     }
 
     async function renderGrid() {
       renderLegend(defaultAnswers)
-      const files = await loadManifest()
-      for (const file of files) {
-        try {
-          const data = await loadChart(file)
-          const chart = pickFirstChart(data)
-          if (!chart) continue
-          const cell = document.createElement('div')
-          cell.className = 'chart-cell'
-          const inner = document.createElement('div')
-          inner.className = 'chart-cell-inner'
-          const title = data.chart?.title || file
-          inner.appendChild(ChartMatrix({ chart, answers: chart.answers, title, onCellClick: null }))
-          cell.appendChild(inner)
-          gridEl.appendChild(cell)
-        } catch (e) {
-          // пропускаем битые файлы
-        }
+      const processed = await loadProcessed()
+      const charts = processed.charts || []
+      for (const item of charts) {
+        const rangeId = item.defaultRangeId || (item.ranges?.[0]?.id)
+        const combinations = buildCombinationsString(item.cells || [], rangeId)
+        const analysisMap = analysisToMap(item.cells || [])
+        const chartObj = { combinations, analysis: analysisMap }
+        const answers = (item.answers && item.answers.length) ? item.answers : defaultAnswers
+
+        const cell = document.createElement('div')
+        cell.className = 'chart-cell'
+        const inner = document.createElement('div')
+        inner.className = 'chart-cell-inner'
+        const title = item.meta?.title || String(item.meta?.id || '')
+        inner.appendChild(ChartMatrix({ chart: chartObj, answers, title, onCellClick: null }))
+        cell.appendChild(inner)
+        gridEl.appendChild(cell)
       }
     }
 
